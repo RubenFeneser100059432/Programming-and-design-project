@@ -1,3 +1,2 @@
-import pygame
-from tiles import Tiles
-from board import Board
+from boardComponents.board import Board
+from boardComponents.tiles import Tiles

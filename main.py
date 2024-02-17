@@ -1,5 +1,4 @@
-import pygame, sys
-from boardComponents import Tiles, Board
+import pygame, sys, boardComponents
 # Initialising the pygame window
 pygame.init()
 clock = pygame.time.Clock()
