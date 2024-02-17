@@ -1,7 +1,7 @@
 import pygame
 class Tiles:
-    def _init_(self, color):
-        self.width, self.height =  100
+    def __init__(self, color):
+        self.width, self.height =  100, 100
         self.color = color
         self.surface = self.CreateTileSurface()
         
