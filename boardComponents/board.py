@@ -1,5 +1,6 @@
 import pygame
 from boardComponents.tiles import Tiles
+
 class Board:
     def __init__(self):
         self.numberOfTiles =  64
@@ -18,7 +19,7 @@ class Board:
         
         self.blackTiles = self.Create32BlackTiles()
         self.whiteTiles = self.Create32WhiteTiles()
-        xs
+        
         self.widthInNumberOfTiles, self.heightInNumberOfTiles =  8, 8
         
     # Method to create the half the tiles necessary for the board

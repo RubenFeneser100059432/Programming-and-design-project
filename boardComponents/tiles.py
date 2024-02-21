@@ -1,5 +1,5 @@
 import pygame
-from boardComponents.board import Board
+
 class Tiles:
     # A tile object takes color, usually an rgb tuple, and position which is a tuple containing a char and an int
     # Which should come from board
