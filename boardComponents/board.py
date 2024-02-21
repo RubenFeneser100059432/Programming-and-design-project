@@ -1,5 +1,5 @@
 import pygame
-
+from boardComponents.tiles import Tiles
 class Board:
     def __init__(self):
         self.numberOfTiles =  64
@@ -16,4 +16,29 @@ class Board:
             [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('e', 1), ('f', 1), ('g', 1), ('h', 1)]
             ]
         
+        self.blackTiles = self.Create32BlackTiles()
+        self.whiteTiles = self.Create32WhiteTiles()
+        xs
         self.widthInNumberOfTiles, self.heightInNumberOfTiles =  8, 8
+        
+    # Method to create the half the tiles necessary for the board
+    def Create32BlackTiles(self):
+        dictionaryOfBlackTiles = {
+            }
+        for x in range(8):
+            for y in range(8):
+                if not(y % 2 == 0) :
+                    dictionaryOfBlackTiles[self.boardLogicArray[x][y]] = Tiles((0,0,0), self.boardLogicArray[x][y]).surface
+              
+        return dictionaryOfBlackTiles
+    
+    # The other half of the tiles
+    def Create32WhiteTiles(self):
+        dictionaryOfWhiteTiles = {
+            }
+        for x in range(8):
+            for y in range(8):
+                if y % 2 == 0 or y == 0:
+                    dictionaryOfWhiteTiles[self.boardLogicArray[x][y]] = Tiles((255,0,0), self.boardLogicArray[x][y]).surface
+              
+        return dictionaryOfWhiteTiles

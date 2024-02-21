@@ -7,7 +7,7 @@ screenWidth, screenHeight = 1000, 1000
 screen = pygame.display.set_mode((screenWidth,screenHeight))
 pygame.display.set_caption('Chess')
 
-
+testTile = boardComponents.Tiles((0,0,0), ('a',1))
 
 
 # Pygame game loop
@@ -17,6 +17,8 @@ while True:
             pygame.quit()
             sys.exit()
     
+    screen.fill((255,255,255))
+    screen.blit(testTile.surface, (0,400))
     pygame.display.flip()
     clock.tick(60)
     
