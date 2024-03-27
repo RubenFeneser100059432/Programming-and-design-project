@@ -1,5 +1,6 @@
 import pygame
 
+
 class Tiles:
     # A tile object takes color, usually an rgb tuple, and position which is a tuple containing a char and an int
     # Which should come from board
@@ -7,6 +8,7 @@ class Tiles:
         self.width, self.height =  100, 100
         self.color = color
         self.surface = self.CreateTileSurface()
+        self.rect = self.surface.get_rect()
         self.xPosition, self.yPosition = position
         
         self.FillSurface()
