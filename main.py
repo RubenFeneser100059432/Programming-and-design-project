@@ -3446,7 +3446,7 @@ def WhichBishopIsCollidedWith(turn, collidingWithBishop, whereMouseIs):
         elif blackBishop2.rect.collidepoint(whereMouseIs):
             return 2
 
-def CenterBishopInTile(turn, whichBishop, whereMouseIs):
+def CenterBishopInTile(turn, whichBishop):
     # Centers a piece in the tile they are currently on to reduce clustering
     if turn == 'white':
         if whichBishop == 1:
@@ -4620,7 +4620,7 @@ def CenterKingInTile(turn):
         else:
             blackKing.rect.center = collisionList[blackKing.rect.collidelist(collisionList)].center
 
-def WhereCanKingMove(turn, whereMouseIs):
+def WhereCanKingMove(turn):
     # Kings can move 1 space in all directions, there are 8 directions
     # Organised in clockwise fashion from top to topleft
     oneMoveInEachDirection = [(0,0)for x in range(0,8)]
@@ -5933,11 +5933,11 @@ def PiecesCollide(turn):
                 whiteCapturedIncrement+=1
                 break
 
-def DetermineAllPotentialMoves(turn, whereMouseIs):
+def DetermineAllPotentialMoves(turn):
     # Determines all potential moves that a side can make
     if turn == 'white':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('black', whereMouseIs))
+        allPotentialMoves.append(WhereCanKingMove('black'))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('black', x))
@@ -5950,7 +5950,7 @@ def DetermineAllPotentialMoves(turn, whereMouseIs):
         return allPotentialMoves
     elif turn == 'black':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('white', whereMouseIs))
+        allPotentialMoves.append(WhereCanKingMove('white'))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('white', x))
@@ -5965,9 +5965,9 @@ def DetermineAllPotentialMoves(turn, whereMouseIs):
         return allPotentialMoves
                 
 
-def Check(turn, whereMouseIs):
+def Check(turn):
     # Determines if a side is in check
-    potentialMoves = DetermineAllPotentialMoves(turn, whereMouseIs)
+    potentialMoves = DetermineAllPotentialMoves(turn)
     # White king position
     whiteKingTileLetter, whiteKingTileNumber = whiteKing.pos
     whiteKingTile =  LocatingTheTileRects(whiteKingTileLetter, whiteKingTileNumber)
@@ -6078,7 +6078,7 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                             whichPlayersTurn = 'black'
                         elif whichPlayersTurn == 'black':
                             whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn, whereMouseIs)
+                    check = Check(whichPlayersTurn)
                     draggingPawn = False
                     
                 elif draggingCastle:
@@ -6102,7 +6102,7 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                             whichPlayersTurn = 'black'
                         elif whichPlayersTurn == 'black':
                             whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn, whereMouseIs)
+                    check = Check(whichPlayersTurn)
                     draggingKnight = False
                 
                 elif draggingBishop:
@@ -6114,7 +6114,7 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                             whichPlayersTurn = 'black'
                         elif whichPlayersTurn == 'black':
                             whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn, whereMouseIs)
+                    check = Check(whichPlayersTurn)
                     draggingBishop = False
                 
                 elif draggingQueen:
@@ -6126,19 +6126,19 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                             whichPlayersTurn = 'black'
                         elif whichPlayersTurn == 'black':
                             whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn, whereMouseIs)
+                    check = Check(whichPlayersTurn)
                     draggingQueen = False
                 
                 elif draggingKing:
                     
-                    MovePositionOfKing(whichPlayersTurn, WhereCanKingMove(whichPlayersTurn, whereMouseIs), whereMouseIs)
+                    MovePositionOfKing(whichPlayersTurn, WhereCanKingMove(whichPlayersTurn), whereMouseIs)
 
                     if switchTurn:
                         if whichPlayersTurn == 'white':
                             whichPlayersTurn = 'black'
                         elif whichPlayersTurn == 'black':
                             whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn, whereMouseIs)
+                    check = Check(whichPlayersTurn)
                     draggingKing = False
                     
             
