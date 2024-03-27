@@ -4,7 +4,7 @@ pygame.init()
 clock =  pygame.time.Clock()
 screenWidth, screenHeight = 1000, 1000
 screen = pygame.display.set_mode((screenWidth, screenHeight))
-pygame.display.set_caption('Test')
+pygame.display.set_caption('2-Player Chess')
 
 
 global whichPlayersTurn
@@ -146,7 +146,7 @@ def PutAllPawnsOnTheBoard():
     screen.blit(whitePawn7.surface, whitePawn7.rect)
     screen.blit(whitePawn8.surface, whitePawn8.rect)
 
-def CollidingWithAPawn(turn):    
+def CollidingWithAPawn(turn, whereMouseIs):    
     # Detects if the mouse collideds with a pawn so they can be moved
     if turn == "white":
         if whitePawn1.rect.collidepoint(whereMouseIs) or whitePawn2.rect.collidepoint(whereMouseIs) or whitePawn3.rect.collidepoint(whereMouseIs) or whitePawn4.rect.collidepoint(whereMouseIs) or whitePawn5.rect.collidepoint(whereMouseIs) or whitePawn6.rect.collidepoint(whereMouseIs) or whitePawn7.rect.collidepoint(whereMouseIs) or whitePawn8.rect.collidepoint(whereMouseIs):
@@ -159,7 +159,7 @@ def CollidingWithAPawn(turn):
         else:
             return False
 
-def WhichPawnIsCollidedWith(turn):
+def WhichPawnIsCollidedWith(turn, whereMouseIs):
         # Determines which pawn is collided with specifically so the correct pawn can be moved
         
         if turn == "white":
@@ -702,7 +702,7 @@ def WhereCanPawnMove(turn, whichPawn):
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray - 1)   
                     return fourMoves    
                         
-def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove):
+def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
     # Movement of the pawn
@@ -1821,7 +1821,7 @@ def PutAllCastlesOnTheBoard():
     screen.blit(whiteCastle1.surface, whiteCastle1.rect)
     screen.blit(whiteCastle2.surface, whiteCastle2.rect)
     
-def CollidingWithACastle(turn):
+def CollidingWithACastle(turn, whereMouseIs):
     # Detects if a castle is colliding with where the mouse is so they can be selected to move 
     if turn == "white":
         if whiteCastle1.rect.collidepoint(whereMouseIs) or whiteCastle2.rect.collidepoint(whereMouseIs):
@@ -1834,7 +1834,7 @@ def CollidingWithACastle(turn):
         else:
             return False
 
-def WhichCastleIsCollidedWith(turn):
+def WhichCastleIsCollidedWith(turn, whereMouseIs):
     # Detects which castle is being clicked
     if turn == 'white':
         if whiteCastle1.rect.collidepoint(whereMouseIs):
@@ -2898,7 +2898,7 @@ def WhereCanCastleMove(turn, whichCastle, isACastle):
                     
                     return twentyEightMoves
                         
-def MovePositionOfCastle(turn, whichCastle, whereCastleCanMove):
+def MovePositionOfCastle(turn, whichCastle, whereCastleCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
     
@@ -3003,7 +3003,7 @@ def PutAllKnightsOnTheBoard():
     screen.blit(whiteKnight1.surface, whiteKnight1.rect)
     screen.blit(whiteKnight2.surface, whiteKnight2.rect)
 
-def CollidingWithAKnight(turn):
+def CollidingWithAKnight(turn, whereMouseIs):
     # Detects if mouse is colliding with a piece
     if turn == 'white':
         if whiteKnight1.rect.collidepoint(whereMouseIs) or whiteKnight2.rect.collidepoint(whereMouseIs):
@@ -3016,7 +3016,7 @@ def CollidingWithAKnight(turn):
         else:
             return False
 
-def WhichKnightIsCollidedWith(turn, collidingWithKnight):
+def WhichKnightIsCollidedWith(turn, collidingWithKnight, whereMouseIs):
     # Detects which knight the mouse is colliding with
     if turn == 'white':
         if whiteKnight1.rect.collidepoint(whereMouseIs):
@@ -3316,7 +3316,7 @@ def WhereCanKnightMove(turn, whichKnight):
                         
                 return eightMoves
          
-def MovePositionOfKnight(turn, whichKnight, whereKnightCanMove):
+def MovePositionOfKnight(turn, whichKnight, whereKnightCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
     
@@ -3420,7 +3420,7 @@ def PutAllBishipsOnTheBoard():
     screen.blit(whiteBishop1.surface, whiteBishop1.rect)
     screen.blit(whiteBishop2.surface, whiteBishop2.rect)
 
-def CollidingWithABishop(turn):
+def CollidingWithABishop(turn, whereMouseIs):
     # Detects if mouse is colliding with a piece
     if turn == 'white':
         if whiteBishop1.rect.collidepoint(whereMouseIs) or whiteBishop2.rect.collidepoint(whereMouseIs):
@@ -3433,7 +3433,7 @@ def CollidingWithABishop(turn):
         else:
             return False
 
-def WhichBishopIsCollidedWith(turn, collidingWithBishop):
+def WhichBishopIsCollidedWith(turn, collidingWithBishop, whereMouseIs):
     # Detects which bishop the mouse is colliding with
     if turn == 'white':
         if whiteBishop1.rect.collidepoint(whereMouseIs):
@@ -3446,7 +3446,7 @@ def WhichBishopIsCollidedWith(turn, collidingWithBishop):
         elif blackBishop2.rect.collidepoint(whereMouseIs):
             return 2
 
-def CenterBishopInTile(turn, whichBishop):
+def CenterBishopInTile(turn, whichBishop, whereMouseIs):
     # Centers a piece in the tile they are currently on to reduce clustering
     if turn == 'white':
         if whichBishop == 1:
@@ -4492,7 +4492,7 @@ def WhereCanBishopMove(turn, whichBishop, isABishop):
                     
                     return twentyEightMoves
                        
-def MovePositionOfBishop(turn, whichBishop, whereBishopCanMove):
+def MovePositionOfBishop(turn, whichBishop, whereBishopCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
     if turn == 'white':
@@ -4594,7 +4594,7 @@ def PutAllTheKingsOnTheBoard():
     
     screen.blit(whiteKing.surface, whiteKing.rect)
 
-def CollidingWithAKing(turn):
+def CollidingWithAKing(turn, whereMouseIs):
     # Detects if mouse is colliding with a piece
     if turn == 'white':
         if whiteKing.rect.collidepoint(whereMouseIs):
@@ -4620,7 +4620,7 @@ def CenterKingInTile(turn):
         else:
             blackKing.rect.center = collisionList[blackKing.rect.collidelist(collisionList)].center
 
-def WhereCanKingMove(turn):
+def WhereCanKingMove(turn, whereMouseIs):
     # Kings can move 1 space in all directions, there are 8 directions
     # Organised in clockwise fashion from top to topleft
     oneMoveInEachDirection = [(0,0)for x in range(0,8)]
@@ -4697,7 +4697,7 @@ def WhereCanKingMove(turn):
 
             return oneMoveInEachDirection
 
-def MovePositionOfKing(turn, whereKingCanMove):
+def MovePositionOfKing(turn, whereKingCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
     
@@ -4755,7 +4755,7 @@ def PutAllTheQueensOnTheBoard():
     screen.blit(blackQueen9.surface, blackQueen9.rect)
     screen.blit(whiteQueen9.surface, whiteQueen9.rect)
 
-def CollidingWithAQueen(turn):
+def CollidingWithAQueen(turn, whereMouseIs):
     if turn == 'white':
         if whiteQueen9.rect.collidepoint(whereMouseIs) or whiteQueen1.rect.collidepoint(whereMouseIs) or whiteQueen2.rect.collidepoint(whereMouseIs) or whiteQueen3.rect.collidepoint(whereMouseIs) or whiteQueen4.rect.collidepoint(whereMouseIs) or whiteQueen5.rect.collidepoint(whereMouseIs) or whiteQueen6.rect.collidepoint(whereMouseIs) or whiteQueen7.rect.collidepoint(whereMouseIs) or whiteQueen8.rect.collidepoint(whereMouseIs):
             return True
@@ -4768,7 +4768,7 @@ def CollidingWithAQueen(turn):
         else:
             return False
 
-def WhichQueenIsCollidedWith(turn):
+def WhichQueenIsCollidedWith(turn, whereMouseIs):
      # If all pawns promote there can be a total of 9 queens on each side 
      # This method locates which one the mouse is on
         if turn == "white":
@@ -4938,7 +4938,7 @@ def WhereCanQueenMove(turn, whichQueen):
             allQueenMoves = queenDiagonalMoves
             return allQueenMoves
 
-def MovePositionOfQueen(turn, whereQueenCanMove, whichQueen):
+def MovePositionOfQueen(turn, whereQueenCanMove, whichQueen, whereMouseIs):
     global switchTurn
     switchTurn = False
     
@@ -5933,11 +5933,11 @@ def PiecesCollide(turn):
                 whiteCapturedIncrement+=1
                 break
 
-def DetermineAllPotentialMoves(turn):
+def DetermineAllPotentialMoves(turn, whereMouseIs):
     # Determines all potential moves that a side can make
     if turn == 'white':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('black'))
+        allPotentialMoves.append(WhereCanKingMove('black', whereMouseIs))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('black', x))
@@ -5950,7 +5950,7 @@ def DetermineAllPotentialMoves(turn):
         return allPotentialMoves
     elif turn == 'black':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('white'))
+        allPotentialMoves.append(WhereCanKingMove('white', whereMouseIs))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('white', x))
@@ -5965,9 +5965,9 @@ def DetermineAllPotentialMoves(turn):
         return allPotentialMoves
                 
 
-def Check(turn):
+def Check(turn, whereMouseIs):
     # Determines if a side is in check
-    potentialMoves = DetermineAllPotentialMoves(turn)
+    potentialMoves = DetermineAllPotentialMoves(turn, whereMouseIs)
     # White king position
     whiteKingTileLetter, whiteKingTileNumber = whiteKing.pos
     whiteKingTile =  LocatingTheTileRects(whiteKingTileLetter, whiteKingTileNumber)
@@ -6035,212 +6035,290 @@ currentMovingQueen = 0
 
 check = False
 
-# Game loop
-while True:
-    
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-        # Checking to see if the mouse is over a piece when it is clicked
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if collidePawn:
-                draggingPawn = True
-                currentMovingPawn = WhichPawnIsCollidedWith(whichPlayersTurn)
-            elif collideCastle:
-                draggingCastle = True
-                currentMovingCastle = WhichCastleIsCollidedWith(whichPlayersTurn)
-            elif collideKnight:
-                draggingKnight = True
-                currentMovingKnight = WhichKnightIsCollidedWith(whichPlayersTurn, CollidingWithAKnight(whichPlayersTurn))
-            elif collideBishop:
-                draggingBishop = True
-                currentMovingBishop = WhichBishopIsCollidedWith(whichPlayersTurn, CollidingWithABishop(whichPlayersTurn))
-            elif collideQueen:
-                draggingQueen = True
-                currentMovingQueen = WhichQueenIsCollidedWith(whichPlayersTurn)
-            elif collideKing:
-                draggingKing = True
+def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen):
+    # Game loop
+    while True:
+        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            # Checking to see if the mouse is over a piece when it is clicked
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if collidePawn:
+                    draggingPawn = True
+                    currentMovingPawn = WhichPawnIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                elif collideCastle:
+                    draggingCastle = True
+                    currentMovingCastle = WhichCastleIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                elif collideKnight:
+                    draggingKnight = True
+                    currentMovingKnight = WhichKnightIsCollidedWith(whichPlayersTurn, CollidingWithAKnight(whichPlayersTurn, whereMouseIs), whereMouseIs)
+                elif collideBishop:
+                    draggingBishop = True
+                    currentMovingBishop = WhichBishopIsCollidedWith(whichPlayersTurn, CollidingWithABishop(whichPlayersTurn, whereMouseIs), whereMouseIs)
+                elif collideQueen:
+                    draggingQueen = True
+                    currentMovingQueen = WhichQueenIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                elif collideKing:
+                    draggingKing = True
+                    
+            # On mouse release it moves a piece if there was a potential move avaliable
+            # If a piece is moved the turn changes and then the check method is called to see if the new move caused a check
+            if event.type == pygame.MOUSEBUTTONUP and CheckIfMouseIsWithinBoardBorder(whereMouseIs):
+                if draggingPawn:
+                    
+                    MovePositionOfPawn(whichPlayersTurn, currentMovingPawn, WhereCanPawnMove(whichPlayersTurn, currentMovingPawn), whereMouseIs)
+                    # After a pawn move if they enter the promotion zone they are promoted to a queen
+                    if PawnCollidesWithPromotionZone(whichPlayersTurn, currentMovingPawn):
+                        PawnPromotion(whichPlayersTurn, currentMovingPawn)
+                    
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn, whereMouseIs)
+                    draggingPawn = False
+                    
+                elif draggingCastle:
+                    
+                    MovePositionOfCastle(whichPlayersTurn, currentMovingCastle, WhereCanCastleMove(whichPlayersTurn, currentMovingCastle, True), whereMouseIs)
+                    
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn)
+                    draggingCastle = False
+                    
+                elif draggingKnight:
+                    
+                    MovePositionOfKnight(whichPlayersTurn, currentMovingKnight, WhereCanKnightMove(whichPlayersTurn, currentMovingKnight), whereMouseIs)
+                    
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn, whereMouseIs)
+                    draggingKnight = False
                 
-        # On mouse release it moves a piece if there was a potential move avaliable
-        # If a piece is moved the turn changes and then the check method is called to see if the new move caused a check
-        if event.type == pygame.MOUSEBUTTONUP and CheckIfMouseIsWithinBoardBorder(whereMouseIs):
-            if draggingPawn:
+                elif draggingBishop:
+                    
+                    MovePositionOfBishop(whichPlayersTurn, currentMovingBishop, WhereCanBishopMove(whichPlayersTurn, currentMovingBishop, draggingBishop), whereMouseIs)
+                    
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn, whereMouseIs)
+                    draggingBishop = False
                 
-                MovePositionOfPawn(whichPlayersTurn, currentMovingPawn, WhereCanPawnMove(whichPlayersTurn, currentMovingPawn))
-                # After a pawn move if they enter the promotion zone they are promoted to a queen
-                if PawnCollidesWithPromotionZone(whichPlayersTurn, currentMovingPawn):
-                    PawnPromotion(whichPlayersTurn, currentMovingPawn)
-                
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingPawn = False
-                
-            elif draggingCastle:
-                
-                MovePositionOfCastle(whichPlayersTurn, currentMovingCastle, WhereCanCastleMove(whichPlayersTurn, currentMovingCastle, True))
-                
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingCastle = False
-                
-            elif draggingKnight:
-                
-                MovePositionOfKnight(whichPlayersTurn, currentMovingKnight, WhereCanKnightMove(whichPlayersTurn, currentMovingKnight))
-                
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingKnight = False
-            
-            elif draggingBishop:
-                
-                MovePositionOfBishop(whichPlayersTurn, currentMovingBishop, WhereCanBishopMove(whichPlayersTurn, currentMovingBishop, draggingBishop))
-                
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingBishop = False
-            
-            elif draggingQueen:
-                
-                MovePositionOfQueen(whichPlayersTurn, WhereCanQueenMove(whichPlayersTurn, currentMovingQueen), currentMovingQueen)
+                elif draggingQueen:
+                    
+                    MovePositionOfQueen(whichPlayersTurn, WhereCanQueenMove(whichPlayersTurn, currentMovingQueen), currentMovingQueen, whereMouseIs)
 
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingQueen = False
-            
-            elif draggingKing:
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn, whereMouseIs)
+                    draggingQueen = False
                 
-                MovePositionOfKing(whichPlayersTurn, WhereCanKingMove(whichPlayersTurn))
+                elif draggingKing:
+                    
+                    MovePositionOfKing(whichPlayersTurn, WhereCanKingMove(whichPlayersTurn, whereMouseIs), whereMouseIs)
 
-                if switchTurn:
-                    if whichPlayersTurn == 'white':
-                        whichPlayersTurn = 'black'
-                    elif whichPlayersTurn == 'black':
-                        whichPlayersTurn = 'white'
-                check = Check(whichPlayersTurn)
-                draggingKing = False
-                
-         
-                
-    screen.fill((255,255,255))
-    whereMouseIs = pygame.mouse.get_pos()
+                    if switchTurn:
+                        if whichPlayersTurn == 'white':
+                            whichPlayersTurn = 'black'
+                        elif whichPlayersTurn == 'black':
+                            whichPlayersTurn = 'white'
+                    check = Check(whichPlayersTurn, whereMouseIs)
+                    draggingKing = False
+                    
+            
+                    
+        screen.fill((255,255,255))
+        whereMouseIs = pygame.mouse.get_pos()
+        
+        # Board set up
+        InstallBoardInLoop()
+        PutPiecesOnTheBoard()
+        DrawBoardBorder()
+        DrawTilePositions()
+        
+        # Shows which players turn it is and if check is occuring
+        if check:
+            whichPlayersTurnTextAndCheck = gameFont.render(f"{whichPlayersTurn} is in check", False, (0,0,0))
+            screen.blit(whichPlayersTurnTextAndCheck, (350,10))
+        else:
+            whichPlayersTurnText = gameFont.render(f"{whichPlayersTurn}'s Turn", False, (0,0,0))
+            screen.blit(whichPlayersTurnText, (400,10))
+        
+        # Detect if mouse collides with a piece
+        collidePawn = CollidingWithAPawn(whichPlayersTurn, whereMouseIs)
+        collideCastle = CollidingWithACastle(whichPlayersTurn, whereMouseIs)
+        collideKnight = CollidingWithAKnight(whichPlayersTurn, whereMouseIs)
+        collideBishop = CollidingWithABishop(whichPlayersTurn, whereMouseIs)
+        collideQueen = CollidingWithAQueen(whichPlayersTurn, whereMouseIs)
+        collideKing = CollidingWithAKing(whichPlayersTurn, whereMouseIs)
+        
+        # Drawing rectangles over all tiles to allow for collisions
+        pygame.draw.rect(screen, (255,255,255), whiteA8, 1)
+        pygame.draw.rect(screen, (0,0,0), blackB8, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteC8, 1)
+        pygame.draw.rect(screen, (0,0,0), blackD8, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteE8, 1)
+        pygame.draw.rect(screen, (0,0,0), blackF8, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteG8, 1)
+        pygame.draw.rect(screen, (0,0,0), blackH8, 1)
+        
+        pygame.draw.rect(screen, (0,0,0), blackA7, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteB7, 1)
+        pygame.draw.rect(screen, (0,0,0), blackC7, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteD7, 1)
+        pygame.draw.rect(screen, (0,0,0), blackE7, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteF7, 1)
+        pygame.draw.rect(screen, (0,0,0), blackG7, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteH7, 1)
+        
+        pygame.draw.rect(screen, (255,255,255), whiteA6, 1)
+        pygame.draw.rect(screen, (0,0,0), blackB6, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteC6, 1)
+        pygame.draw.rect(screen, (0,0,0), blackD6, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteE6, 1)
+        pygame.draw.rect(screen, (0,0,0), blackF6, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteG6, 1)
+        pygame.draw.rect(screen, (0,0,0), blackH6, 1)
+        
+        pygame.draw.rect(screen, (0,0,0), blackA5, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteB5, 1)
+        pygame.draw.rect(screen, (0,0,0), blackC5, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteD5, 1)
+        pygame.draw.rect(screen, (0,0,0), blackE5, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteF5, 1)
+        pygame.draw.rect(screen, (0,0,0), blackG5, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteH5, 1)
+        
+        pygame.draw.rect(screen, (255,255,255), whiteA4, 1)
+        pygame.draw.rect(screen, (0,0,0), blackB4, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteC4, 1)
+        pygame.draw.rect(screen, (0,0,0), blackD4, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteE4, 1)
+        pygame.draw.rect(screen, (0,0,0), blackF4, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteG4, 1)
+        pygame.draw.rect(screen, (0,0,0), blackH4, 1)
+        
+        pygame.draw.rect(screen, (0,0,0), blackA3, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteB3, 1)
+        pygame.draw.rect(screen, (0,0,0), blackC3, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteD3, 1)
+        pygame.draw.rect(screen, (0,0,0), blackE3, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteF3, 1)
+        pygame.draw.rect(screen, (0,0,0), blackG3, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteH3, 1)
+        
+        pygame.draw.rect(screen, (255,255,255), whiteA2, 1)
+        pygame.draw.rect(screen, (0,0,0), blackB2, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteC2, 1)
+        pygame.draw.rect(screen, (0,0,0), blackD2, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteE2, 1)
+        pygame.draw.rect(screen, (0,0,0), blackF2, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteG2, 1)
+        pygame.draw.rect(screen, (0,0,0), blackH2, 1)
+        
+        pygame.draw.rect(screen, (0,0,0), blackA1, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteB1, 1)
+        pygame.draw.rect(screen, (0,0,0), blackC1, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteD1, 1)
+        pygame.draw.rect(screen, (0,0,0), blackE1, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteF1, 1)
+        pygame.draw.rect(screen, (0,0,0), blackG1, 1)
+        pygame.draw.rect(screen, (255,255,255), whiteH1, 1)
+        
+        
+        pygame.display.flip()
+        clock.tick(60)
+
+
+BG = pygame.image.load("/Users/michael/Python/Programming-and-design-project/background.jpg")
+
+def draw_text(text, font, color, surface, x, y): # defining a function draw_text for drawing words on buttons that takes the following peramiteres.
+    text_obj = font.render(text, True, color) # renders text
+    text_rect = text_obj.get_rect() 
+    text_rect.center = (x, y) # gets position
+    surface.blit(text_obj, text_rect) # draws rendered text on desired position
     
-    # Board set up
-    InstallBoardInLoop()
-    PutPiecesOnTheBoard()
-    DrawBoardBorder()
-    DrawTilePositions()
-    
-    # Shows which players turn it is and if check is occuring
-    if check:
-        whichPlayersTurnTextAndCheck = gameFont.render(f"{whichPlayersTurn} is in check", False, (0,0,0))
-        screen.blit(whichPlayersTurnTextAndCheck, (350,10))
-    else:
-        whichPlayersTurnText = gameFont.render(f"{whichPlayersTurn}'s Turn", False, (0,0,0))
-        screen.blit(whichPlayersTurnText, (400,10))
-    
-    # Detect if mouse collides with a piece
-    collidePawn = CollidingWithAPawn(whichPlayersTurn)
-    collideCastle = CollidingWithACastle(whichPlayersTurn)
-    collideKnight = CollidingWithAKnight(whichPlayersTurn)
-    collideBishop = CollidingWithABishop(whichPlayersTurn)
-    collideQueen = CollidingWithAQueen(whichPlayersTurn)
-    collideKing = CollidingWithAKing(whichPlayersTurn)
-    
-    # Drawing rectangles over all tiles to allow for collisions
-    pygame.draw.rect(screen, (255,255,255), whiteA8, 1)
-    pygame.draw.rect(screen, (0,0,0), blackB8, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteC8, 1)
-    pygame.draw.rect(screen, (0,0,0), blackD8, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteE8, 1)
-    pygame.draw.rect(screen, (0,0,0), blackF8, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteG8, 1)
-    pygame.draw.rect(screen, (0,0,0), blackH8, 1)
-    
-    pygame.draw.rect(screen, (0,0,0), blackA7, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteB7, 1)
-    pygame.draw.rect(screen, (0,0,0), blackC7, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteD7, 1)
-    pygame.draw.rect(screen, (0,0,0), blackE7, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteF7, 1)
-    pygame.draw.rect(screen, (0,0,0), blackG7, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteH7, 1)
-    
-    pygame.draw.rect(screen, (255,255,255), whiteA6, 1)
-    pygame.draw.rect(screen, (0,0,0), blackB6, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteC6, 1)
-    pygame.draw.rect(screen, (0,0,0), blackD6, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteE6, 1)
-    pygame.draw.rect(screen, (0,0,0), blackF6, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteG6, 1)
-    pygame.draw.rect(screen, (0,0,0), blackH6, 1)
-    
-    pygame.draw.rect(screen, (0,0,0), blackA5, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteB5, 1)
-    pygame.draw.rect(screen, (0,0,0), blackC5, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteD5, 1)
-    pygame.draw.rect(screen, (0,0,0), blackE5, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteF5, 1)
-    pygame.draw.rect(screen, (0,0,0), blackG5, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteH5, 1)
-    
-    pygame.draw.rect(screen, (255,255,255), whiteA4, 1)
-    pygame.draw.rect(screen, (0,0,0), blackB4, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteC4, 1)
-    pygame.draw.rect(screen, (0,0,0), blackD4, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteE4, 1)
-    pygame.draw.rect(screen, (0,0,0), blackF4, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteG4, 1)
-    pygame.draw.rect(screen, (0,0,0), blackH4, 1)
-    
-    pygame.draw.rect(screen, (0,0,0), blackA3, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteB3, 1)
-    pygame.draw.rect(screen, (0,0,0), blackC3, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteD3, 1)
-    pygame.draw.rect(screen, (0,0,0), blackE3, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteF3, 1)
-    pygame.draw.rect(screen, (0,0,0), blackG3, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteH3, 1)
-    
-    pygame.draw.rect(screen, (255,255,255), whiteA2, 1)
-    pygame.draw.rect(screen, (0,0,0), blackB2, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteC2, 1)
-    pygame.draw.rect(screen, (0,0,0), blackD2, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteE2, 1)
-    pygame.draw.rect(screen, (0,0,0), blackF2, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteG2, 1)
-    pygame.draw.rect(screen, (0,0,0), blackH2, 1)
-    
-    pygame.draw.rect(screen, (0,0,0), blackA1, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteB1, 1)
-    pygame.draw.rect(screen, (0,0,0), blackC1, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteD1, 1)
-    pygame.draw.rect(screen, (0,0,0), blackE1, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteF1, 1)
-    pygame.draw.rect(screen, (0,0,0), blackG1, 1)
-    pygame.draw.rect(screen, (255,255,255), whiteH1, 1)
-    
-    
-    pygame.display.flip()
-    clock.tick(60)
-    
+
+# Main menu loop function
+def main_menu():
+
+    while True: # started our loop
+        playButtonRect = pygame.Rect(screenWidth // 2 - 100, screenHeight // 2 - 50, 200, 100) # start button variable position
+        quitButtonRect = pygame.Rect(screenWidth // 2 - 100, screenHeight // 2 - -100, 200, 100) # quit button variable positioning
+        # Iterates over every action taken by the user
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT: # if the event type is quitting pygame application, exit pygame and sys.
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if playButtonRect.collidepoint(pygame.mouse.get_pos()):
+                    # if the event taken was a mouse click by the user, and the collidepoint is on the start button;
+                    # Transition to next screen
+                    secondScreen()
+                if quitButtonRect.collidepoint(pygame.mouse.get_pos()):
+                    pygame.quit()
+                    sys.exit()
+                    
+
+        screen.blit(BG, (0, 0)) # Here we initialise the BG variable to set background of menu screen
+        draw_text("Chess Game", pygame.font.Font(None, 60), (0, 0, 0), screen, screenWidth // 2, 100) # title drawn using draw_text function
+        colourOfButton = (0, 0, 0) # addding colour of start button
+        colourOfQuitButton = (20,20,20) # colour of quit button
+        pygame.draw.rect(screen, colourOfButton, playButtonRect) # drawing start button
+        pygame.draw.rect(screen, colourOfQuitButton, quitButtonRect) # drawing quit button
+        # taken from existing pygame Font class
+        draw_text("Start", pygame.font.Font(None, 60), (255, 0, 0), screen, screenWidth // 2, screenHeight // 2,)
+        draw_text("Quit", pygame.font.Font(None, 60), (255, 0, 0), screen, screenWidth // 2, screenHeight // 1.4 - 60)
+        pygame.display.flip() # turns to next screen once button clicked
+        clock.tick(60)
+
+def secondScreen(): # second screen(colour choice) function
+    while True: # same loop as first screen
+        whiteButtonRect = pygame.Rect(screenWidth // 2 - -100, screenHeight // 2 - 50, 200, 100) # white button variable
+        blackButtonRect = pygame.Rect(screenWidth // 2 - 350, screenHeight // 2 - 50, 200, 100) # black button variable
+        backButtonRect = pygame.Rect(screenWidth // 2 - 100, screenHeight // 2- -100, 200, 100) # back button variable
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                    if whiteButtonRect.collidepoint(pygame.mouse.get_pos()):
+                        # Transition back to first main menu screen ~ (work in progress) - wont take you to main menu in final design
+                        GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
+                    if blackButtonRect.collidepoint(pygame.mouse.get_pos()):
+                        GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
+                    if backButtonRect.collidepoint(pygame.mouse.get_pos()):
+                        main_menu() # this one does stay like this... 
+                        
+        screen.blit(BG, (0, 0))
+        draw_text("Player One, Please Choose Your Colour", pygame.font.Font(None, 60), (0, 0, 0), screen, screenWidth // 2, 100)
+        colourOfButtonWhite = (255,255,255) # adding colour of white button
+        colourOfButtonBlack = (0,0,0) # adding colour of black button
+        colourOfButtonBack = (20,20,20) # colour of back button
+        pygame.draw.rect(screen, colourOfButtonWhite, whiteButtonRect) # drawing white button on screen
+        pygame.draw.rect(screen, colourOfButtonBlack, blackButtonRect) # drawing black button on screen
+        pygame.draw.rect(screen, colourOfButtonBack, backButtonRect) # drawing back button on screen
+        draw_text("White", pygame.font.Font(None, 60), (0,0,0), screen, screenWidth // 1.4 - 20, screenHeight // 2,)
+        draw_text("Black", pygame.font.Font(None, 60), (255,255,255), screen, screenWidth // 4, screenHeight // 2,)
+        draw_text("Back", pygame.font.Font(None, 60), (255,0,0), screen, screenWidth // 2, screenHeight // 1.4 - 60) #same as quit button positioning
+        
+        pygame.display.flip() # in this instance flips back to main menu screen (for now...)
+        clock.tick(60)
+
+main_menu() # runs program
