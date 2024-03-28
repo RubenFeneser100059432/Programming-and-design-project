@@ -215,10 +215,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                     break
                         # If the pawn is taking diagonally
                         if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - 1, whitePawn1.indexJOnLogicArray+1)
                         if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - 1, whitePawn1.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -228,14 +228,14 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - 1, whitePawn1.indexJOnLogicArray)
                     if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - 1, whitePawn1.indexJOnLogicArray+1)
                     if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - 1, whitePawn1.indexJOnLogicArray-1)
                     
                     return fourMoves
-        
+            
         if whichPawn == 2:
             if whitePawn2.onBoard:
                 if whitePawn2.firstMove:
@@ -247,10 +247,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn2.indexIOnLogicArray - x][whitePawn2.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray+1)
                         if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -260,10 +260,10 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray)
                     if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray+1)
                     if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -279,10 +279,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn3.indexIOnLogicArray - x][whitePawn3.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray+1)
                         if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -292,10 +292,10 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray)
                     if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray+1)
                     if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -311,11 +311,15 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn4.indexIOnLogicArray - x][whitePawn4.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray+1)
+                            else:
+                                fourMoves[2] = (0,0)
                         if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray-1)
+                            else:
+                                fourMoves[3] = (0,0)
                     
                     return fourMoves
                     
@@ -324,12 +328,13 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray)
                     if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray+1)
+                        else:
+                            fourMoves[2] = (0,0)
                     if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray-1)
-                    
                     return fourMoves
         
         if whichPawn == 5:
@@ -343,10 +348,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn5.indexIOnLogicArray - x][whitePawn5.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray+1)
                         if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -356,10 +361,10 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray)
                     if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray+1)
                     if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -375,10 +380,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn6.indexIOnLogicArray - x][whitePawn6.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray+1)
                         if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -388,10 +393,10 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray)
                     if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray+1)
                     if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -407,10 +412,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn7.indexIOnLogicArray - x][whitePawn7.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray+1)
                         if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -420,10 +425,10 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray)
                     if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray+1)
                     if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -439,10 +444,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[whitePawn8.indexIOnLogicArray - x][whitePawn8.indexJOnLogicArray] != 0:
                                     break
                         if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] < 0:
+                            if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray+1)
                         if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray - 1] < 0:
+                            if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray - 1] <= 0:
                                 fourMoves[3] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray-1)
                     
                     return fourMoves
@@ -452,14 +457,15 @@ def WhereCanPawnMove(turn, whichPawn):
                         if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray] == 0:
                             fourMoves[0] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray)
                     if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray + 1 < 8:
-                        if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] < 0:
+                        if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] <= 0:
                             fourMoves[2] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray+1)
                     if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray - 1 >= 0:
-                        if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray - 1] < 0:
+                        if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray - 1] <= 0:
                             fourMoves[3] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray-1)
                     
                     return fourMoves
-
+        else:
+                return fourMoves
     elif turn == 'black':
         
         if whichPawn == 1:
@@ -473,10 +479,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn1.indexIOnLogicArray + x][blackPawn1.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray + 1)
                         if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -485,10 +491,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray)
                     if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray + 1)
                     if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray - 1)   
                     return fourMoves 
         
@@ -503,10 +509,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn2.indexIOnLogicArray + x][blackPawn2.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray + 1)
                         if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -515,10 +521,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray)
                     if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray + 1)
                     if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray - 1)   
                     return fourMoves
             
@@ -533,10 +539,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn3.indexIOnLogicArray + x][blackPawn3.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray + 1)
                         if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -545,10 +551,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray)
                     if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray + 1)
                     if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray - 1)   
                     return fourMoves
         
@@ -563,10 +569,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn4.indexIOnLogicArray + x][blackPawn4.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray + 1)
                         if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -575,10 +581,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray)
                     if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray + 1)
                     if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray - 1)   
                     return fourMoves
         
@@ -593,10 +599,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn5.indexIOnLogicArray + x][blackPawn5.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray + 1)
                         if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -605,10 +611,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray)
                     if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray + 1)
                     if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray - 1)   
                     return fourMoves
         
@@ -623,10 +629,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn6.indexIOnLogicArray + x][blackPawn6.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray + 1)
                         if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -635,10 +641,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray)
                     if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray + 1)
                     if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray - 1)   
                     return fourMoves
         
@@ -653,10 +659,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn7.indexIOnLogicArray + x][blackPawn7.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray + 1)
                         if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -665,10 +671,10 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray)
                     if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray + 1)
                     if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray - 1)   
                     return fourMoves
             
@@ -683,10 +689,10 @@ def WhereCanPawnMove(turn, whichPawn):
                                 elif rectLogicArray[blackPawn8.indexIOnLogicArray + x][blackPawn8.indexJOnLogicArray] != 0:
                                     break
                         if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray + 1)
                         if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray - 1)
                     
                     return fourMoves  
@@ -695,13 +701,164 @@ def WhereCanPawnMove(turn, whichPawn):
                             if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray] == 0:
                                 fourMoves[0] =  AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray)
                     if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray + 1 < 8:
-                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] > 0:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray + 1)
                     if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray - 1 >= 0:
-                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray - 1] > 0:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray - 1] >= 0:
                                 fourMoves[3] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray - 1)   
                     return fourMoves    
-                        
+        else:
+            return fourMoves 
+        
+def CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+    # Checks if the desired pawn can take a piece diagonally
+    if turn == 'white':
+        if whichPawn == 1:
+            if x == 2:
+                if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 2:
+            if x == 2:
+                if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 3:
+            if x == 2:
+                if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 4:
+            if x == 2:
+                if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 5:
+            if x == 2:
+                if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 6:
+            if x == 2:
+                if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 7:
+            if x == 2:
+                if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray - 1] < 0:
+                                    return True
+        elif whichPawn == 8:
+            if x == 2:
+                if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] < 0:
+                                return True
+            if x == 3:
+                if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray - 1 >= 0:
+                                if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray - 1] < 0:
+                                    return True
+    elif turn == 'black':
+        if whichPawn == 1:
+            if x == 2:
+                if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 2:
+            if x == 2:
+                if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 3:
+            if x == 2:
+                if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 4:
+            if x == 2:
+                if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 5:
+            if x == 2:
+                if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 6:
+            if x == 2:
+                if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 7:
+            if x == 2:
+                if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray - 1] > 0:
+                                return True
+        elif whichPawn == 8:
+            if x == 2:
+                if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray + 1 < 8:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] > 0:
+                                return True
+            if x == 3:
+                if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray - 1 >= 0:
+                            if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray - 1] > 0:
+                                return True
+                            
 def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
     global switchTurn
     switchTurn = False
@@ -711,297 +868,298 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]: # If the movement list is not empty
                 if whitePawn1.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs): # If where the mouse is alligns with potential moves
-                            whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs # movement of the pawn
-                            CenterPawnInTile(turn, whichPawn) # ensures the pawn is centered in its new tile
-                            PiecesCollide(turn) # If it collides with a piece of opposite colour it removes them from the board
-                            
-                            if whitePawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)): # Ensures the movement of the pawn is on the right tile
-                                rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 0 # Starting here the position of the pawn is updated in the logic array
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 1 # Ending here
-                                switchTurn = True # Signals that whites turn is over
-                                whitePawn1.pos = wherePawnCanMove[x] # Updates position in the object
-                                whitePawn1.firstMove = False # Signals that the first move has been made to change the amount of potential moves next turn
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x): # Allowing movement diagonally only if there is a piece to take
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs): # If where the mouse is alligns with potential moves
+                                whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs # movement of the pawn
+                                CenterPawnInTile(turn, whichPawn) # ensures the pawn is centered in its new tile
+                                PiecesCollide(turn) # If it collides with a piece of opposite colour it removes them from the board
+                                
+                                if whitePawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)): # Ensures the movement of the pawn is on the right tile
+                                    rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 0 # Starting here the position of the pawn is updated in the logic array
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 1 # Ending here
+                                    switchTurn = True # Signals that whites turn is over
+                                    whitePawn1.pos = wherePawnCanMove[x] # Updates position in the object
+                                    whitePawn1.firstMove = False # Signals that the first move has been made to change the amount of potential moves next turn
+                          
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn1.pos = wherePawnCanMove[x]
-                                whitePawn1.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn1.indexIOnLogicArray][whitePawn1.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn1.pos = wherePawnCanMove[x]
+                                    whitePawn1.firstMove = False
         
         if whichPawn == 2:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn2.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn2.pos = wherePawnCanMove[x]
-                                whitePawn2.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn2.pos = wherePawnCanMove[x]
+                                    whitePawn2.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn2.pos = wherePawnCanMove[x]
-                                whitePawn2.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn2.indexIOnLogicArray][whitePawn2.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn2.pos = wherePawnCanMove[x]
+                                    whitePawn2.firstMove = False
         
         if whichPawn == 3:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn3.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn3.pos = wherePawnCanMove[x]
-                                whitePawn3.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn3.pos = wherePawnCanMove[x]
+                                    whitePawn3.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn3.pos = wherePawnCanMove[x]
-                                whitePawn3.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn3.indexIOnLogicArray][whitePawn3.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn3.pos = wherePawnCanMove[x]
+                                    whitePawn3.firstMove = False
         
         if whichPawn == 4:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn4.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn4.pos = wherePawnCanMove[x]
-                                whitePawn4.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn4.pos = wherePawnCanMove[x]
+                                    whitePawn4.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn4.pos = wherePawnCanMove[x]
-                                whitePawn4.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn4.indexIOnLogicArray][whitePawn4.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn4.pos = wherePawnCanMove[x]
+                                    whitePawn4.firstMove = False
         
         if whichPawn == 5:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn5.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn5.pos = wherePawnCanMove[x]
-                                whitePawn5.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn5.pos = wherePawnCanMove[x]
+                                    whitePawn5.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn5.pos = wherePawnCanMove[x]
-                                whitePawn5.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn5.indexIOnLogicArray][whitePawn5.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn5.pos = wherePawnCanMove[x]
+                                    whitePawn5.firstMove = False
         
         if whichPawn == 6:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn6.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn6.pos = wherePawnCanMove[x]
-                                whitePawn6.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn6.pos = wherePawnCanMove[x]
+                                    whitePawn6.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn6.pos = wherePawnCanMove[x]
-                                whitePawn6.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn6.indexIOnLogicArray][whitePawn6.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn6.pos = wherePawnCanMove[x]
+                                    whitePawn6.firstMove = False
         
         if whichPawn == 7:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn7.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn7.pos = wherePawnCanMove[x]
-                                whitePawn7.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn7.pos = wherePawnCanMove[x]
+                                    whitePawn7.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn7.pos = wherePawnCanMove[x]
-                                whitePawn7.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn7.indexIOnLogicArray][whitePawn7.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn7.pos = wherePawnCanMove[x]
+                                    whitePawn7.firstMove = False
         
         if whichPawn == 8:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if whitePawn8.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn8.pos = wherePawnCanMove[x]
-                                whitePawn8.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn8.pos = wherePawnCanMove[x]
+                                    whitePawn8.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if whitePawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 1
-                                switchTurn = True
-                                whitePawn8.pos = wherePawnCanMove[x]
-                                whitePawn8.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if whitePawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[whitePawn8.indexIOnLogicArray][whitePawn8.indexJOnLogicArray] = 1
+                                    switchTurn = True
+                                    whitePawn8.pos = wherePawnCanMove[x]
+                                    whitePawn8.firstMove = False
         
     
     elif turn == 'black':
@@ -1010,297 +1168,297 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn1.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn1.pos = wherePawnCanMove[x]
-                                blackPawn1.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn1.pos = wherePawnCanMove[x]
+                                    blackPawn1.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn1.pos = wherePawnCanMove[x]
-                                blackPawn1.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn1.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn1.pos = wherePawnCanMove[x]
+                                    blackPawn1.firstMove = False
         
         if whichPawn == 2:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn2.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn2.pos = wherePawnCanMove[x]
-                                blackPawn2.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn2.pos = wherePawnCanMove[x]
+                                    blackPawn2.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn2.pos = wherePawnCanMove[x]
-                                blackPawn2.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn2.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn2.pos = wherePawnCanMove[x]
+                                    blackPawn2.firstMove = False
         
         if whichPawn == 3:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn3.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn3.pos = wherePawnCanMove[x]
-                                blackPawn3.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn3.pos = wherePawnCanMove[x]
+                                    blackPawn3.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn3.pos = wherePawnCanMove[x]
-                                blackPawn3.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn3.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn3.pos = wherePawnCanMove[x]
+                                    blackPawn3.firstMove = False
                                 
         if whichPawn == 4:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn4.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn4.pos = wherePawnCanMove[x]
-                                blackPawn4.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn4.pos = wherePawnCanMove[x]
+                                    blackPawn4.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn4.pos = wherePawnCanMove[x]
-                                blackPawn4.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn4.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn4.pos = wherePawnCanMove[x]
+                                    blackPawn4.firstMove = False
         
         if whichPawn == 5:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn5.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn5.pos = wherePawnCanMove[x]
-                                blackPawn5.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn5.pos = wherePawnCanMove[x]
+                                    blackPawn5.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn5.pos = wherePawnCanMove[x]
-                                blackPawn5.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn5.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn5.pos = wherePawnCanMove[x]
+                                    blackPawn5.firstMove = False
         
         if whichPawn == 6:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn6.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn6.pos = wherePawnCanMove[x]
-                                blackPawn6.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn6.pos = wherePawnCanMove[x]
+                                    blackPawn6.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn6.pos = wherePawnCanMove[x]
-                                blackPawn6.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn6.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn6.pos = wherePawnCanMove[x]
+                                    blackPawn6.firstMove = False
         
         if whichPawn == 7:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn7.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn7.pos = wherePawnCanMove[x]
-                                blackPawn7.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn7.pos = wherePawnCanMove[x]
+                                    blackPawn7.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn7.pos = wherePawnCanMove[x]
-                                blackPawn7.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn7.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn7.pos = wherePawnCanMove[x]
+                                    blackPawn7.firstMove = False
         
         if whichPawn == 8:
             if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
                 if blackPawn8.firstMove:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn8.pos = wherePawnCanMove[x]
-                                blackPawn8.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn8.pos = wherePawnCanMove[x]
+                                    blackPawn8.firstMove = False
                 else:
                     for x in range(0,4):
-                        
-                        tileLetter, tileNumber = wherePawnCanMove[x]
-                        if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                            blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
-                            CenterPawnInTile(turn, whichPawn)
-                            PiecesCollide(turn)
-                            
-                            if blackPawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
-                                rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = 0
-                                indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                                blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = indexI, indexJ
-                                rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = -1
-                                switchTurn = True
-                                blackPawn8.pos = wherePawnCanMove[x]
-                                blackPawn8.firstMove = False
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                            tileLetter, tileNumber = wherePawnCanMove[x]
+                            if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                                blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
+                                CenterPawnInTile(turn, whichPawn)
+                                PiecesCollide(turn)
+                                
+                                if blackPawn8.rect.colliderect(LocatingTheTileRects(tileLetter,tileNumber)):
+                                    rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = 0
+                                    indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                                    blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = indexI, indexJ
+                                    rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = -1
+                                    switchTurn = True
+                                    blackPawn8.pos = wherePawnCanMove[x]
+                                    blackPawn8.firstMove = False
 
 def CenterPawnInTile(turn, whichPawn):
     # Takes an offcentered pawn and centers it after movement to make the board look less clustered
@@ -4658,7 +4816,7 @@ def WhereCanKingMove(turn):
             if whiteKing.indexIOnLogicArray - 1 >= 0 and whiteKing.indexJOnLogicArray - 1 >= 0:
                 if rectLogicArray[whiteKing.indexIOnLogicArray - 1][whiteKing.indexJOnLogicArray - 1] < 1:
                     oneMoveInEachDirection[7] = AdjustPositionAfterMove(whiteKing.indexIOnLogicArray - 1, whiteKing.indexJOnLogicArray - 1)
-
+                                    
             return oneMoveInEachDirection
     
     elif turn == 'black':
@@ -4694,6 +4852,18 @@ def WhereCanKingMove(turn):
             if blackKing.indexIOnLogicArray - 1 >= 0 and blackKing.indexJOnLogicArray - 1 >= 0:
                 if rectLogicArray[blackKing.indexIOnLogicArray - 1][blackKing.indexJOnLogicArray - 1] >= 0:
                     oneMoveInEachDirection[7] = AdjustPositionAfterMove(blackKing.indexIOnLogicArray - 1, blackKing.indexJOnLogicArray - 1)
+            
+            """
+            for k in range(0,8):
+                kingTileLetter, kingTileNumber = oneMoveInEachDirection[k]
+                for x in range(0, len(potentialMoves)):
+                    if potentialMoves[x] != None:
+                        for y in range(0, len(potentialMoves[x])):
+                            if potentialMoves[x][y] != None:
+                                tileLetter, tileNumber =  potentialMoves[x][y]
+                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
+                                    oneMoveInEachDirection[k] = (0,0)
+            """
 
             return oneMoveInEachDirection
 
@@ -4732,7 +4902,7 @@ def MovePositionOfKing(turn, whereKingCanMove, whereMouseIs):
                         rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = 0
                         indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
                         blackKing.indexIOnLogicArray, blackKing.indexJOnLogicArray =  indexI, indexJ
-                        rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = 6
+                        rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = -6
                         switchTurn = True
                         blackKing.pos = whereKingCanMove[x]
 
@@ -5604,7 +5774,7 @@ def LocatingTheTileRects(tileLetter, tileNumber):
         if tileNumber == 8:
             return blackH8
     else:
-        return whiteA2
+        return pygame.Rect(3000,3000,10,10)
 
 def AdjustPositionAfterMove(iIndex, jIndex):
     # Takes two indexs and outputs the tile position
@@ -5933,41 +6103,99 @@ def PiecesCollide(turn):
                 whiteCapturedIncrement+=1
                 break
 
-def DetermineAllPotentialMoves(turn):
-    # Determines all potential moves that a side can make
+def DetermineAllPotentialMovesForKingMoves(turn):
+    # Using the moves of the opponent pieces, determines the possible moves a king can make
     if turn == 'white':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('black'))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('black', x))
                 allPotentialMoves.append(WhereCanBishopMove('black', x, True))
                 allPotentialMoves.append(WhereCanCastleMove('black', x, True))
             if x < 9:
-                allPotentialMoves.append(WhereCanPawnMove('black', x))
+                allPotentialMoves.append([WhereCanPawnMove('black', x)[2], WhereCanPawnMove('black', x)[3]])
+                
             allPotentialMoves.append(WhereCanQueenMove('black', x))
-            
+        allPotentialMoves.append(WhereCanKingMove('black'))
         return allPotentialMoves
+    
     elif turn == 'black':
         allPotentialMoves = []
-        allPotentialMoves.append(WhereCanKingMove('white'))
         for x in range(1,10):
             if x < 3:
                 allPotentialMoves.append(WhereCanKnightMove('white', x))
                 allPotentialMoves.append(WhereCanBishopMove('white', x, True))
                 allPotentialMoves.append(WhereCanCastleMove('white', x, True))
             if x < 9:
-                allPotentialMoves.append(WhereCanPawnMove('white', x))
-
-
+                pawnMove = WhereCanPawnMove('white', x)
+                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                
             allPotentialMoves.append(WhereCanQueenMove('white', x))
+        allPotentialMoves.append(WhereCanKingMove('white'))
+        return allPotentialMoves
+
+def RestrictKingsMovement(turn, opponentsPotentialMoves):
+    whiteKingPotentialMoves = WhereCanKingMove('white')
+    blackKingPotentialMoves = WhereCanKingMove('black')
+    if turn == 'white':
+        for k in range(0,8):
+                kingTileLetter, kingTileNumber = whiteKingPotentialMoves[k]
+                for x in range(0, len(opponentsPotentialMoves)):
+                    if opponentsPotentialMoves[x] != None: 
+                        for y in range(0, len(opponentsPotentialMoves[x])):
+                            if opponentsPotentialMoves[x][y] != None:
+                                tileLetter, tileNumber =  opponentsPotentialMoves[x][y]
+                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
+                                    whiteKingPotentialMoves[k] = (0,0)
+        return whiteKingPotentialMoves
+    elif turn == 'black':
+        for k in range(0,8):
+                kingTileLetter, kingTileNumber = blackKingPotentialMoves[k]
+                for x in range(0, len(opponentsPotentialMoves)):
+                    if opponentsPotentialMoves[x] != None:
+                        for y in range(0, len(opponentsPotentialMoves[x])):
+                            if opponentsPotentialMoves[x][y] != None:
+                                tileLetter, tileNumber =  opponentsPotentialMoves[x][y]
+                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
+                                    blackKingPotentialMoves[k] = (0,0)
+        return blackKingPotentialMoves
+        
+    
+def DetermineAllPotentialMovesForCheck(turn):
+    # Determines all potential moves that a side can make, except the king
+    if turn == 'white':
+        allPotentialMoves = []
+        for x in range(1,10):
+            if x < 3:
+                allPotentialMoves.append(WhereCanKnightMove('black', x))
+                allPotentialMoves.append(WhereCanBishopMove('black', x, True))
+                allPotentialMoves.append(WhereCanCastleMove('black', x, True))
+            if x < 9:
+                pawnMove = WhereCanPawnMove('black', x)
+                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                
+            allPotentialMoves.append(WhereCanQueenMove('black', x))
             
+        return allPotentialMoves
+    elif turn == 'black':
+        allPotentialMoves = []
+        for x in range(1,10):
+            if x < 3:
+                allPotentialMoves.append(WhereCanKnightMove('white', x))
+                allPotentialMoves.append(WhereCanBishopMove('white', x, True))
+                allPotentialMoves.append(WhereCanCastleMove('white', x, True))
+            if x < 9:
+                pawnMove = WhereCanPawnMove('white', x)
+                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                
+            allPotentialMoves.append(WhereCanQueenMove('white', x))
+
         return allPotentialMoves
                 
 
 def Check(turn):
     # Determines if a side is in check
-    potentialMoves = DetermineAllPotentialMoves(turn)
+    potentialMoves = DetermineAllPotentialMovesForCheck(turn)
     # White king position
     whiteKingTileLetter, whiteKingTileNumber = whiteKing.pos
     whiteKingTile =  LocatingTheTileRects(whiteKingTileLetter, whiteKingTileNumber)
@@ -5979,7 +6207,7 @@ def Check(turn):
         for x in range(0, len(potentialMoves)):
             if potentialMoves[x] != None:
                 for y in range(0, len(potentialMoves[x])):
-                    if potentialMoves[x][y] != None:
+                    if potentialMoves[x][y] != None and potentialMoves[x][y] != (0,0):
                         tileLetter, tileNumber =  potentialMoves[x][y]
                         tile =  LocatingTheTileRects(tileLetter, tileNumber)
                         if whiteKingTile == tile:
@@ -5989,12 +6217,17 @@ def Check(turn):
         for x in range(0, len(potentialMoves)):
             if potentialMoves[x] != None:
                 for y in range(0, len(potentialMoves[x])):
-                    if potentialMoves[x][y] != None:
+                    if potentialMoves[x][y] != None and potentialMoves[x][y] != (0,0):
                         tileLetter, tileNumber =  potentialMoves[x][y]
                         tile =  LocatingTheTileRects(tileLetter, tileNumber)
                         if blackKingTile == tile:
                             return True
         return False        
+
+def CheckMate(turn, check):
+    if turn == 'white':
+        if check:
+            pass
           
 gameFont = pygame.font.Font("freesansbold.ttf", 32)
 light_grey = (200,200,200)
@@ -6131,7 +6364,7 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                 
                 elif draggingKing:
                     
-                    MovePositionOfKing(whichPlayersTurn, WhereCanKingMove(whichPlayersTurn), whereMouseIs)
+                    MovePositionOfKing(whichPlayersTurn, RestrictKingsMovement(whichPlayersTurn, DetermineAllPotentialMovesForKingMoves(whichPlayersTurn)), whereMouseIs)
 
                     if switchTurn:
                         if whichPlayersTurn == 'white':
