@@ -1,0 +1,33 @@
+What has been completed:
+- Created the board
+- Created the pieces of both sides
+- On the board there are letters and numbers along the axis to show which tile you are on
+- Created correct piece movement algorithms for each piece
+- Created taking opponents pieces
+- Created pawn promotion to queen
+- Implemented the Check rule
+- If in check, it is stated at the top of the screen
+- Implemented turns
+- Following from turns, the turn of the current player is displayed at the top
+- Stopped pieces from leaving the board
+- Centered each piece in the middle of their current tile
+- Started to develop the basis for breaking check
+- King is unable to put itself into check
+
+- Main menu framework has been completed and merged with the game, more features to be added
+
+What is yet to be completed:
+- Checkmate
+- Following Checkmate is a winner and the congratulations that follows
+- Stalemate
+- Castling
+- En passante
+- Improved gui to see the moves you can make each time you click a piece
+- When in check you have to break the check before the next move
+- Stop pieces other than king from moving if it will result in checking yourself
+
+Current bugs/issues:
+- The space the king is on can be moved to but the king remains and the other 'taking' piece is not affects, this will be fixed when
+  checkmate, stalemate and the check rules are completed. It will no longer be a problem because the 'taking' or attacking piece
+  will not be able to move onto the kings tile before the game ends
+  
