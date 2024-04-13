@@ -212,7 +212,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn1.indexIOnLogicArray - x][whitePawn1.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn1.indexIOnLogicArray - x, whitePawn1.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn1.indexIOnLogicArray - x][whitePawn1.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         # If the pawn is taking diagonally
                         if whitePawn1.indexIOnLogicArray - 1 >= 0 and whitePawn1.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn1.indexIOnLogicArray - 1][whitePawn1.indexJOnLogicArray + 1] <= 0:
@@ -245,7 +246,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn2.indexIOnLogicArray - x][whitePawn2.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - x, whitePawn2.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn2.indexIOnLogicArray - x][whitePawn2.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn2.indexIOnLogicArray - 1 >= 0 and whitePawn2.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn2.indexIOnLogicArray - 1][whitePawn2.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn2.indexIOnLogicArray - 1, whitePawn2.indexJOnLogicArray+1)
@@ -277,7 +279,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn3.indexIOnLogicArray - x][whitePawn3.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - x, whitePawn3.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn3.indexIOnLogicArray - x][whitePawn3.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn3.indexIOnLogicArray - 1 >= 0 and whitePawn3.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn3.indexIOnLogicArray - 1][whitePawn3.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn3.indexIOnLogicArray - 1, whitePawn3.indexJOnLogicArray+1)
@@ -309,7 +312,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn4.indexIOnLogicArray - x][whitePawn4.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - x, whitePawn4.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn4.indexIOnLogicArray - x][whitePawn4.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn4.indexIOnLogicArray - 1 >= 0 and whitePawn4.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn4.indexIOnLogicArray - 1][whitePawn4.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn4.indexIOnLogicArray - 1, whitePawn4.indexJOnLogicArray+1)
@@ -346,7 +350,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn5.indexIOnLogicArray - x][whitePawn5.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - x, whitePawn5.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn5.indexIOnLogicArray - x][whitePawn5.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn5.indexIOnLogicArray - 1 >= 0 and whitePawn5.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn5.indexIOnLogicArray - 1][whitePawn5.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn5.indexIOnLogicArray - 1, whitePawn5.indexJOnLogicArray+1)
@@ -378,7 +383,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn6.indexIOnLogicArray - x][whitePawn6.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - x, whitePawn6.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn6.indexIOnLogicArray - x][whitePawn6.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn6.indexIOnLogicArray - 1 >= 0 and whitePawn6.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn6.indexIOnLogicArray - 1][whitePawn6.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn6.indexIOnLogicArray - 1, whitePawn6.indexJOnLogicArray+1)
@@ -410,7 +416,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn7.indexIOnLogicArray - x][whitePawn7.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - x, whitePawn7.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn7.indexIOnLogicArray - x][whitePawn7.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn7.indexIOnLogicArray - 1 >= 0 and whitePawn7.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn7.indexIOnLogicArray - 1][whitePawn7.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn7.indexIOnLogicArray - 1, whitePawn7.indexJOnLogicArray+1)
@@ -442,7 +449,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[whitePawn8.indexIOnLogicArray - x][whitePawn8.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - x, whitePawn8.indexJOnLogicArray)
                                 elif rectLogicArray[whitePawn8.indexIOnLogicArray - x][whitePawn8.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if whitePawn8.indexIOnLogicArray - 1 >= 0 and whitePawn8.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[whitePawn8.indexIOnLogicArray - 1][whitePawn8.indexJOnLogicArray + 1] <= 0:
                                 fourMoves[2] =  AdjustPositionAfterMove(whitePawn8.indexIOnLogicArray - 1, whitePawn8.indexJOnLogicArray+1)
@@ -477,7 +485,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn1.indexIOnLogicArray + x][blackPawn1.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + x, blackPawn1.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn1.indexIOnLogicArray + x][blackPawn1.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn1.indexIOnLogicArray + 1 < 8 and blackPawn1.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn1.indexIOnLogicArray + 1][blackPawn1.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn1.indexIOnLogicArray + 1, blackPawn1.indexJOnLogicArray + 1)
@@ -507,7 +516,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn2.indexIOnLogicArray + x][blackPawn2.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + x, blackPawn2.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn2.indexIOnLogicArray + x][blackPawn2.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn2.indexIOnLogicArray + 1 < 8 and blackPawn2.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn2.indexIOnLogicArray + 1][blackPawn2.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn2.indexIOnLogicArray + 1, blackPawn2.indexJOnLogicArray + 1)
@@ -537,7 +547,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn3.indexIOnLogicArray + x][blackPawn3.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + x, blackPawn3.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn3.indexIOnLogicArray + x][blackPawn3.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn3.indexIOnLogicArray + 1 < 8 and blackPawn3.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn3.indexIOnLogicArray + 1][blackPawn3.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn3.indexIOnLogicArray + 1, blackPawn3.indexJOnLogicArray + 1)
@@ -567,7 +578,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn4.indexIOnLogicArray + x][blackPawn4.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + x, blackPawn4.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn4.indexIOnLogicArray + x][blackPawn4.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn4.indexIOnLogicArray + 1 < 8 and blackPawn4.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn4.indexIOnLogicArray + 1][blackPawn4.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn4.indexIOnLogicArray + 1, blackPawn4.indexJOnLogicArray + 1)
@@ -597,7 +609,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn5.indexIOnLogicArray + x][blackPawn5.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + x, blackPawn5.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn5.indexIOnLogicArray + x][blackPawn5.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn5.indexIOnLogicArray + 1 < 8 and blackPawn5.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn5.indexIOnLogicArray + 1][blackPawn5.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn5.indexIOnLogicArray + 1, blackPawn5.indexJOnLogicArray + 1)
@@ -627,7 +640,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn6.indexIOnLogicArray + x][blackPawn6.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + x, blackPawn6.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn6.indexIOnLogicArray + x][blackPawn6.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn6.indexIOnLogicArray + 1 < 8 and blackPawn6.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn6.indexIOnLogicArray + 1][blackPawn6.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn6.indexIOnLogicArray + 1, blackPawn6.indexJOnLogicArray + 1)
@@ -657,7 +671,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn7.indexIOnLogicArray + x][blackPawn7.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + x, blackPawn7.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn7.indexIOnLogicArray + x][blackPawn7.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn7.indexIOnLogicArray + 1 < 8 and blackPawn7.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn7.indexIOnLogicArray + 1][blackPawn7.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn7.indexIOnLogicArray + 1, blackPawn7.indexJOnLogicArray + 1)
@@ -687,7 +702,8 @@ def WhereCanPawnMove(turn, whichPawn):
                                 if rectLogicArray[blackPawn8.indexIOnLogicArray + x][blackPawn8.indexJOnLogicArray] == 0:
                                     fourMoves[x-1] =  AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + x, blackPawn8.indexJOnLogicArray)
                                 elif rectLogicArray[blackPawn8.indexIOnLogicArray + x][blackPawn8.indexJOnLogicArray] != 0:
-                                    break
+                                    if x == 1:
+                                        continue
                         if blackPawn8.indexIOnLogicArray + 1 < 8 and blackPawn8.indexJOnLogicArray + 1 < 8:
                             if rectLogicArray[blackPawn8.indexIOnLogicArray + 1][blackPawn8.indexJOnLogicArray + 1] >= 0:
                                 fourMoves[2] = AdjustPositionAfterMove(blackPawn8.indexIOnLogicArray + 1, blackPawn8.indexJOnLogicArray + 1)
@@ -865,10 +881,10 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
     # Movement of the pawn
     if turn == 'white':
         if whichPawn == 1:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]: # If the movement list is not empty
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]: # If the movement list is not empty
                 if whitePawn1.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x): # Allowing movement diagonally only if there is a piece to take
+                    for x in range(0,len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3: # Allowing movement diagonally only if there is a piece to take
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs): # If where the mouse is alligns with potential moves
                                 whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs # movement of the pawn
@@ -883,10 +899,13 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True # Signals that whites turn is over
                                     whitePawn1.pos = wherePawnCanMove[x] # Updates position in the object
                                     whitePawn1.firstMove = False # Signals that the first move has been made to change the amount of potential moves next turn
-                          
+                                    # Detects if two spaces have been moved rather than one
+                                    if x == 1:
+                                        whitePawn1.justMovedTwoSpace = True
+                                        
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn1.rect.x, whitePawn1.rect.y = whereMouseIs
@@ -901,12 +920,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn1.pos = wherePawnCanMove[x]
                                     whitePawn1.firstMove = False
+                                    if whitePawn1.justMovedTwoSpace:
+                                        whitePawn1.justMovedTwoSpace = False
         
         if whichPawn == 2:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn2.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
@@ -921,9 +942,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn2.pos = wherePawnCanMove[x]
                                     whitePawn2.firstMove = False
+                                    if x == 1:
+                                        whitePawn2.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn2.rect.x, whitePawn2.rect.y = whereMouseIs
@@ -938,12 +961,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn2.pos = wherePawnCanMove[x]
                                     whitePawn2.firstMove = False
+                                    if whitePawn2.justMovedTwoSpace:
+                                        whitePawn2.justMovedTwoSpace = False
         
         if whichPawn == 3:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn3.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
@@ -958,9 +983,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn3.pos = wherePawnCanMove[x]
                                     whitePawn3.firstMove = False
+                                    if x == 1:
+                                        whitePawn3.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn3.rect.x, whitePawn3.rect.y = whereMouseIs
@@ -975,12 +1002,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn3.pos = wherePawnCanMove[x]
                                     whitePawn3.firstMove = False
+                                    if whitePawn3.justMovedTwoSpace:
+                                        whitePawn3.justMovedTwoSpace = False
         
         if whichPawn == 4:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn4.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
@@ -995,9 +1024,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn4.pos = wherePawnCanMove[x]
                                     whitePawn4.firstMove = False
+                                    if x == 1:
+                                        whitePawn4.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn4.rect.x, whitePawn4.rect.y = whereMouseIs
@@ -1012,12 +1043,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn4.pos = wherePawnCanMove[x]
                                     whitePawn4.firstMove = False
+                                    if whitePawn4.justMovedTwoSpace:
+                                        whitePawn4.justMovedTwoSpace = False
         
         if whichPawn == 5:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn5.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
@@ -1032,9 +1065,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn5.pos = wherePawnCanMove[x]
                                     whitePawn5.firstMove = False
+                                    if x == 1:
+                                        whitePawn5.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn5.rect.x, whitePawn5.rect.y = whereMouseIs
@@ -1049,12 +1084,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn5.pos = wherePawnCanMove[x]
                                     whitePawn5.firstMove = False
+                                    if whitePawn5.justMovedTwoSpace:
+                                        whitePawn5.justMovedTwoSpace = False
         
         if whichPawn == 6:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn6.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
@@ -1069,9 +1106,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn6.pos = wherePawnCanMove[x]
                                     whitePawn6.firstMove = False
+                                    if x == 1:
+                                        whitePawn6.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn6.rect.x, whitePawn6.rect.y = whereMouseIs
@@ -1086,12 +1125,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn6.pos = wherePawnCanMove[x]
                                     whitePawn6.firstMove = False
+                                    if whitePawn6.justMovedTwoSpace:
+                                        whitePawn6.justMovedTwoSpace = False
         
         if whichPawn == 7:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn7.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
@@ -1106,9 +1147,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn7.pos = wherePawnCanMove[x]
                                     whitePawn7.firstMove = False
+                                    if x == 1:
+                                        whitePawn7.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn7.rect.x, whitePawn7.rect.y = whereMouseIs
@@ -1123,12 +1166,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn7.pos = wherePawnCanMove[x]
                                     whitePawn7.firstMove = False
+                                    if whitePawn7.justMovedTwoSpace:
+                                        whitePawn7.justMovedTwoSpace = False
         
         if whichPawn == 8:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if whitePawn8.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
@@ -1143,9 +1188,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn8.pos = wherePawnCanMove[x]
                                     whitePawn8.firstMove = False
+                                    if x == 1:
+                                        whitePawn8.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 whitePawn8.rect.x, whitePawn8.rect.y = whereMouseIs
@@ -1160,15 +1207,17 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     whitePawn8.pos = wherePawnCanMove[x]
                                     whitePawn8.firstMove = False
+                                    if whitePawn8.justMovedTwoSpace:
+                                        whitePawn8.justMovedTwoSpace = False
         
     
     elif turn == 'black':
         
         if whichPawn == 1:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn1.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
@@ -1183,9 +1232,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn1.pos = wherePawnCanMove[x]
                                     blackPawn1.firstMove = False
+                                    if x == 1:
+                                        blackPawn1.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn1.rect.x, blackPawn1.rect.y = whereMouseIs
@@ -1200,12 +1251,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn1.pos = wherePawnCanMove[x]
                                     blackPawn1.firstMove = False
+                                    if blackPawn1.justMovedTwoSpace:
+                                        blackPawn1.justMovedTwoSpace = False
         
         if whichPawn == 2:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn2.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
@@ -1220,9 +1273,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn2.pos = wherePawnCanMove[x]
                                     blackPawn2.firstMove = False
+                                    if x == 1:
+                                        blackPawn2.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn2.rect.x, blackPawn2.rect.y = whereMouseIs
@@ -1237,12 +1292,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn2.pos = wherePawnCanMove[x]
                                     blackPawn2.firstMove = False
+                                    if blackPawn2.justMovedTwoSpace:
+                                        blackPawn2.justMovedTwoSpace = False
         
         if whichPawn == 3:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn3.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
@@ -1257,9 +1314,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn3.pos = wherePawnCanMove[x]
                                     blackPawn3.firstMove = False
+                                    if x == 1:
+                                        blackPawn3.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn3.rect.x, blackPawn3.rect.y = whereMouseIs
@@ -1274,12 +1333,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn3.pos = wherePawnCanMove[x]
                                     blackPawn3.firstMove = False
+                                    if blackPawn3.justMovedTwoSpace:
+                                        blackPawn3.justMovedTwoSpace = False
                                 
         if whichPawn == 4:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn4.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
@@ -1294,9 +1355,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn4.pos = wherePawnCanMove[x]
                                     blackPawn4.firstMove = False
+                                    if x == 1:
+                                        blackPawn4.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn4.rect.x, blackPawn4.rect.y = whereMouseIs
@@ -1311,12 +1374,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn4.pos = wherePawnCanMove[x]
                                     blackPawn4.firstMove = False
+                                    if blackPawn4.justMovedTwoSpace:
+                                        blackPawn4.justMovedTwoSpace = False
         
         if whichPawn == 5:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn5.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
@@ -1331,9 +1396,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn5.pos = wherePawnCanMove[x]
                                     blackPawn5.firstMove = False
+                                    if x == 1:
+                                        blackPawn5.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn5.rect.x, blackPawn5.rect.y = whereMouseIs
@@ -1348,12 +1415,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn5.pos = wherePawnCanMove[x]
                                     blackPawn5.firstMove = False
+                                    if blackPawn5.justMovedTwoSpace:
+                                        blackPawn5.justMovedTwoSpace = False
         
         if whichPawn == 6:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn6.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
@@ -1368,9 +1437,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn6.pos = wherePawnCanMove[x]
                                     blackPawn6.firstMove = False
+                                    if x == 1:
+                                        blackPawn6.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn6.rect.x, blackPawn6.rect.y = whereMouseIs
@@ -1385,12 +1456,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn6.pos = wherePawnCanMove[x]
                                     blackPawn6.firstMove = False
+                                    if blackPawn6.justMovedTwoSpace:
+                                        blackPawn6.justMovedTwoSpace = False
         
         if whichPawn == 7:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn7.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
@@ -1405,9 +1478,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn7.pos = wherePawnCanMove[x]
                                     blackPawn7.firstMove = False
+                                    if x == 1:
+                                        blackPawn7.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn7.rect.x, blackPawn7.rect.y = whereMouseIs
@@ -1422,12 +1497,14 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn7.pos = wherePawnCanMove[x]
                                     blackPawn7.firstMove = False
+                                    if blackPawn7.justMovedTwoSpace:
+                                        blackPawn7.justMovedTwoSpace = False
         
         if whichPawn == 8:
-            if wherePawnCanMove != [(0,0), (0,0), (0,0), (0,0)]:
+            if wherePawnCanMove != [(0,0) for x in range(0, len(wherePawnCanMove))]:
                 if blackPawn8.firstMove:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
@@ -1442,9 +1519,11 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn8.pos = wherePawnCanMove[x]
                                     blackPawn8.firstMove = False
+                                    if x == 1:
+                                        blackPawn8.justMovedTwoSpace = True
                 else:
-                    for x in range(0,4):
-                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x):
+                    for x in range(0, len(wherePawnCanMove)):
+                        if x < 2 or CheckIfPawnCanTakeDiagonally(turn, whichPawn, x) or x > 3:
                             tileLetter, tileNumber = wherePawnCanMove[x]
                             if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
                                 blackPawn8.rect.x, blackPawn8.rect.y = whereMouseIs
@@ -1459,6 +1538,8 @@ def MovePositionOfPawn(turn, whichPawn, wherePawnCanMove, whereMouseIs):
                                     switchTurn = True
                                     blackPawn8.pos = wherePawnCanMove[x]
                                     blackPawn8.firstMove = False
+                                    if blackPawn8.justMovedTwoSpace:
+                                        blackPawn8.justMovedTwoSpace = False
 
 def CenterPawnInTile(turn, whichPawn):
     # Takes an offcentered pawn and centers it after movement to make the board look less clustered
@@ -1778,7 +1859,7 @@ def PawnPromotion(turn, whichPawn):
             
             # Set position of queen
             blackQueen1.pos = blackPawn1.pos 
-            rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = 5 
+            rectLogicArray[blackPawn1.indexIOnLogicArray][blackPawn1.indexJOnLogicArray] = -5 
             blackQueen1.indexIOnLogicArray, blackQueen1.indexJOnLogicArray = blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray
             blackQueen1.rect.center = blackPawn1.rect.center
             blackQueen1.onBoard = True
@@ -1793,7 +1874,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 2:
             
             blackQueen2.pos = blackPawn2.pos
-            rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn2.indexIOnLogicArray][blackPawn2.indexJOnLogicArray] = -5
             blackQueen2.indexIOnLogicArray, blackQueen2.indexJOnLogicArray = blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray
             
             
@@ -1810,7 +1891,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 3:
             
             blackQueen3.pos = blackPawn3.pos
-            rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn3.indexIOnLogicArray][blackPawn3.indexJOnLogicArray] = -5
             blackQueen3.indexIOnLogicArray, blackQueen3.indexJOnLogicArray = blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray
             
             
@@ -1827,7 +1908,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 4:
             
             blackQueen4.pos = blackPawn4.pos
-            rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn4.indexIOnLogicArray][blackPawn4.indexJOnLogicArray] = -5
             blackQueen4.indexIOnLogicArray, blackQueen4.indexJOnLogicArray = blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray
             
             
@@ -1844,7 +1925,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 5:
             
             blackQueen5.pos = blackPawn5.pos
-            rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn5.indexIOnLogicArray][blackPawn5.indexJOnLogicArray] = -5
             blackQueen5.indexIOnLogicArray, blackQueen5.indexJOnLogicArray = blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray
             
             
@@ -1861,7 +1942,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 6:
             
             blackQueen6.pos = blackPawn6.pos
-            rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn6.indexIOnLogicArray][blackPawn6.indexJOnLogicArray] = -5
             blackQueen6.indexIOnLogicArray, blackQueen6.indexJOnLogicArray = blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray
             
             
@@ -1878,7 +1959,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 7:
             
             blackQueen7.pos = blackPawn7.pos
-            rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn7.indexIOnLogicArray][blackPawn7.indexJOnLogicArray] = -5
             blackQueen7.indexIOnLogicArray, blackQueen7.indexJOnLogicArray = blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray
             
             
@@ -1895,7 +1976,7 @@ def PawnPromotion(turn, whichPawn):
         if whichPawn == 8:
             
             blackQueen8.pos = blackPawn8.pos
-            rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = 5
+            rectLogicArray[blackPawn8.indexIOnLogicArray][blackPawn8.indexJOnLogicArray] = -5
             blackQueen8.indexIOnLogicArray, blackQueen8.indexJOnLogicArray = blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray
             
             
@@ -4872,39 +4953,43 @@ def MovePositionOfKing(turn, whereKingCanMove, whereMouseIs):
     switchTurn = False
     
     if turn == 'white':
-        if whereKingCanMove != [(0,0) for x in range(0,8)]: # If the movement list is not empty
+        if whereKingCanMove != [(0,0) for x in range(0,len(whereKingCanMove))]: # If the movement list is not empty
             
-            for x in range(0,8):
-                tileLetter, tileNumber = whereKingCanMove[x]
-                if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs): # If where the mouse is alligns with potential moves
-                    whiteKing.rect.x, whiteKing.rect.y = whereMouseIs # movement of the bishop
-                    CenterKingInTile(turn) # ensures the bishop is centered in its new tile
-                    PiecesCollide(turn) # If it collides with a piece of opposite colour it removes them from the board
-                    
-                    if whiteKing.rect.colliderect(LocatingTheTileRects(tileLetter, tileNumber)):  # Ensures the movement of the bishop is on the right tile
-                        rectLogicArray[whiteKing.indexIOnLogicArray][whiteKing.indexJOnLogicArray] = 0 # Starting here the position of the bishop is updated in the logic array
-                        indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                        whiteKing.indexIOnLogicArray, whiteKing.indexJOnLogicArray =  indexI, indexJ
-                        rectLogicArray[whiteKing.indexIOnLogicArray][whiteKing.indexJOnLogicArray] = 6 # Ends here
-                        switchTurn = True
-                        whiteKing.pos = whereKingCanMove[x] # Updates position in the object
+            for x in range(0,len(whereKingCanMove)):
+                if whereKingCanMove[x] != (0,0) and whereKingCanMove[x] != None:
+                    tileLetter, tileNumber = whereKingCanMove[x]
+                    if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs): # If where the mouse is alligns with potential moves
+                        whiteKing.rect.x, whiteKing.rect.y = whereMouseIs # movement of the bishop
+                        CenterKingInTile(turn) # ensures the bishop is centered in its new tile
+                        KingCollidesWithAPiece(turn)# If it collides with a piece of opposite colour it removes them from the board
+                        
+                        if whiteKing.rect.colliderect(LocatingTheTileRects(tileLetter, tileNumber)):  # Ensures the movement of the bishop is on the right tile
+                            rectLogicArray[whiteKing.indexIOnLogicArray][whiteKing.indexJOnLogicArray] = 0 # Starting here the position of the bishop is updated in the logic array
+                            indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                            whiteKing.indexIOnLogicArray, whiteKing.indexJOnLogicArray =  indexI, indexJ
+                            rectLogicArray[whiteKing.indexIOnLogicArray][whiteKing.indexJOnLogicArray] = 6 # Ends here
+                            switchTurn = True
+                            whiteKing.pos = whereKingCanMove[x] # Updates position in the object
+                            whiteKing.moved = True
     
     elif turn == 'black':
-        if whereKingCanMove != [(0,0) for x in range(0,8)]:
+        if whereKingCanMove != [(0,0) for x in range(0,len(whereKingCanMove))]:
             
-            for x in range(0,8):
-                tileLetter, tileNumber = whereKingCanMove[x]
-                if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
-                    blackKing.rect.x, blackKing.rect.y = whereMouseIs
-                    CenterKingInTile(turn)
-                    PiecesCollide(turn)
-                    if blackKing.rect.colliderect(LocatingTheTileRects(tileLetter, tileNumber)):
-                        rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = 0
-                        indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
-                        blackKing.indexIOnLogicArray, blackKing.indexJOnLogicArray =  indexI, indexJ
-                        rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = -6
-                        switchTurn = True
-                        blackKing.pos = whereKingCanMove[x]
+            for x in range(0,len(whereKingCanMove)):
+                if whereKingCanMove[x] != (0,0) and whereKingCanMove[x] != None:
+                    tileLetter, tileNumber = whereKingCanMove[x]
+                    if LocatingTheTileRects(tileLetter,tileNumber).collidepoint(whereMouseIs):
+                        blackKing.rect.x, blackKing.rect.y = whereMouseIs
+                        CenterKingInTile(turn)
+                        KingCollidesWithAPiece(turn)
+                        if blackKing.rect.colliderect(LocatingTheTileRects(tileLetter, tileNumber)):
+                            rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = 0
+                            indexI, indexJ = FindingTheLogicArrayIndexOfATile(tileLetter, tileNumber)
+                            blackKing.indexIOnLogicArray, blackKing.indexJOnLogicArray =  indexI, indexJ
+                            rectLogicArray[blackKing.indexIOnLogicArray][blackKing.indexJOnLogicArray] = -6
+                            switchTurn = True
+                            blackKing.pos = whereKingCanMove[x]
+                            blackKing.moved = True
 
 # Queen methods
 
@@ -5598,6 +5683,7 @@ blackA1,whiteB1,blackC1,whiteD1,blackE1,whiteF1,blackG1,whiteH1
 
 ]
 
+
         
 # Methods and variables for the board
 
@@ -6103,6 +6189,41 @@ def PiecesCollide(turn):
                 whiteCapturedIncrement+=1
                 break
 
+def KingCollidesWithAPiece(turn):
+    whiteCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9]
+    blackCollisionList = [blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    
+    whiteCapturedIncrement = 0
+    blackCapturedIncrement = 0
+    if turn == 'white':
+        if whiteKing.rect.collideobjects(blackCollisionList) != None:
+            
+            piece = whiteKing.rect.collideobjects(blackCollisionList)
+            piece.rect.x, piece.rect.y = 2000,1600 + (60*blackCapturedIncrement)
+            piece.pos = (0,0)
+            piece.indexIOnLogicArray, piece.indexJOnLogicArray = 10,10 
+            piece.onBoard = False
+            capturedWhitePieces.append(piece)
+            blackCapturedIncrement+=1
+    elif turn == 'black':
+        if blackKing.rect.collideobjects(whiteCollisionList) != None:
+            
+            piece = blackKing.rect.collideobjects(whiteCollisionList)
+            piece.rect.x, piece.rect.y = 2100,1600 + (60*whiteCapturedIncrement)
+            piece.pos = (0,0)
+            piece.indexIOnLogicArray, piece.indexJOnLogicArray = 10,10 
+            piece.onBoard = False
+            capturedWhitePieces.append(piece)
+            whiteCapturedIncrement+=1
+
+            
+        
+# Check related methods
+
 def DetermineAllPotentialMovesForKingMoves(turn):
     # Using the moves of the opponent pieces, determines the possible moves a king can make
     if turn == 'white':
@@ -6113,7 +6234,14 @@ def DetermineAllPotentialMovesForKingMoves(turn):
                 allPotentialMoves.append(WhereCanBishopMove('black', x, True))
                 allPotentialMoves.append(WhereCanCastleMove('black', x, True))
             if x < 9:
-                allPotentialMoves.append([WhereCanPawnMove('black', x)[2], WhereCanPawnMove('black', x)[3]])
+                pawnMove = WhereCanPawnMove('black', x)
+                if pawnMove != None:
+                    if pawnMove[2] != None and pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                    elif pawnMove[2] != None:
+                        allPotentialMoves.append([pawnMove[2]])
+                    elif pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('black', x))
         allPotentialMoves.append(WhereCanKingMove('black'))
@@ -6128,39 +6256,392 @@ def DetermineAllPotentialMovesForKingMoves(turn):
                 allPotentialMoves.append(WhereCanCastleMove('white', x, True))
             if x < 9:
                 pawnMove = WhereCanPawnMove('white', x)
-                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                if pawnMove != None:
+                    if pawnMove[2] != None and pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                    elif pawnMove[2] != None:
+                        allPotentialMoves.append([pawnMove[2]])
+                    elif pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('white', x))
         allPotentialMoves.append(WhereCanKingMove('white'))
         return allPotentialMoves
 
-def RestrictKingsMovement(turn, opponentsPotentialMoves):
-    whiteKingPotentialMoves = WhereCanKingMove('white')
-    blackKingPotentialMoves = WhereCanKingMove('black')
-    if turn == 'white':
-        for k in range(0,8):
-                kingTileLetter, kingTileNumber = whiteKingPotentialMoves[k]
-                for x in range(0, len(opponentsPotentialMoves)):
-                    if opponentsPotentialMoves[x] != None: 
-                        for y in range(0, len(opponentsPotentialMoves[x])):
-                            if opponentsPotentialMoves[x][y] != None:
-                                tileLetter, tileNumber =  opponentsPotentialMoves[x][y]
-                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
-                                    whiteKingPotentialMoves[k] = (0,0)
-        return whiteKingPotentialMoves
-    elif turn == 'black':
-        for k in range(0,8):
-                kingTileLetter, kingTileNumber = blackKingPotentialMoves[k]
-                for x in range(0, len(opponentsPotentialMoves)):
-                    if opponentsPotentialMoves[x] != None:
-                        for y in range(0, len(opponentsPotentialMoves[x])):
-                            if opponentsPotentialMoves[x][y] != None:
-                                tileLetter, tileNumber =  opponentsPotentialMoves[x][y]
-                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
-                                    blackKingPotentialMoves[k] = (0,0)
-        return blackKingPotentialMoves
-        
+def RestrictKingsMovement(turn):
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    check = Check(turn)
+    castlingPotentialMoves = [CastlingPotentialMoves(turn, check)]
+    if castlingPotentialMoves != None:
+        kingPotentialMoves = WhereCanKingMove(turn) + castlingPotentialMoves
+    else:
+        kingPotentialMoves = WhereCanKingMove(turn) 
     
+    currentkingPos, currentIIndex, currentJIndex = GetPositionOfCurrentKingForReset(turn)
+    if kingPotentialMoves != None:
+        for p in range(0,len(kingPotentialMoves)):
+            if kingPotentialMoves[p] != None:
+                kingTileLetter, kingTileNumber =  kingPotentialMoves[p]
+                if kingTileLetter != 0 and kingTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(kingTileLetter, kingTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    if turn == 'white':
+                        whiteKing.pos = (kingTileLetter, kingTileNumber)
+                    elif turn == 'black':
+                        blackKing.pos = (kingTileLetter, kingTileNumber)
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        
+                        pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                        piece = pieceCollisionList[pieceNumber]
+                        piece.onBoard = False
+                        if turn == 'white':
+                            rectLogicArray[nextIIndex][nextJIndex] = 6
+                        elif turn == 'black':
+                            rectLogicArray[nextIIndex][nextJIndex] = -6
+                        hel = Check(turn)
+                        if hel:
+                            kingPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                            rectLogicArray[currentIIndex][currentJIndex] = 6
+                        elif turn == 'black':
+                            rectLogicArray[currentIIndex][currentJIndex] = -6
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                        piece.onBoard = True
+                        if turn == 'white':
+                            whiteKing.pos = currentkingPos
+                        elif turn == 'black':
+                            blackKing.pos = currentkingPos
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 6
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -6
+                        hel = Check(turn)
+                        if hel:
+                            kingPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 6
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -6
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                        if turn == 'white':
+                            whiteKing.pos = currentkingPos
+                        elif turn == 'black':
+                            blackKing.pos = currentkingPos
+                
+        return kingPotentialMoves
+ 
+def RestrictPawnMovement(turn, whichPawn, possibleEnPassante):
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    if possibleEnPassante:
+        possibleEPMoves, notNeededHere = PossibleEnPassanteMoves(turn, whichPawn, possibleEnPassante)
+        if possibleEPMoves != 0:
+            pawnPotentialMoves = WhereCanPawnMove(turn, whichPawn) + possibleEPMoves
+    else:
+        pawnPotentialMoves = WhereCanPawnMove(turn, whichPawn)
+    currentPawnPos, currentIIndex, currentJIndex = GetPositionOfCurrentPawnForReset(turn, whichPawn)
+    if pawnPotentialMoves != None:
+        for p in range(0,len(pawnPotentialMoves)):
+            if pawnPotentialMoves[p] != None:
+                pawnTileLetter, pawnTileNumber =  pawnPotentialMoves[p]
+                if pawnTileLetter != 0 and pawnTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(pawnTileLetter, pawnTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        for x in range(0,len(pieceCollisionList)):
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 1
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -1
+                            hel = Check(turn)
+                            if hel:
+                                pawnPotentialMoves[p] = (0,0)
+                            if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 1
+                            elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -1
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 1
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -1
+                        hel = Check(turn)
+                        if hel:
+                            pawnPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 1
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -1
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                
+        return pawnPotentialMoves
+
+def RestrictCastleMovement(turn, whichCastle):
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    castlePotentialMoves = WhereCanCastleMove(turn, whichCastle, True) 
+    currentcastlePos, currentIIndex, currentJIndex = GetPositionOfCurrentCastleForReset(turn, whichCastle)
+    if castlePotentialMoves != None:
+        for p in range(0,len(castlePotentialMoves)):
+            if castlePotentialMoves[p] != None:
+                castleTileLetter, castleTileNumber =  castlePotentialMoves[p]
+                if castleTileLetter != 0 and castleTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(castleTileLetter, castleTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        for x in range(0,len(pieceCollisionList)):
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 2
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -2
+                            hel = Check(turn)
+                            if hel:
+                                castlePotentialMoves[p] = (0,0)
+                            if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 2
+                            elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -2
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 2
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -2
+                        hel = Check(turn)
+                        if hel:
+                            castlePotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 2
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -2
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                
+        return castlePotentialMoves
+
+def RestrictKnightMovement(turn, whichKnight):
+    
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    
+    knightPotentialMoves = WhereCanKnightMove(turn, whichKnight) 
+    currentknightPos, currentIIndex, currentJIndex = GetPositionOfCurrentKnightForReset(turn, whichKnight)
+    if knightPotentialMoves != None:
+        for p in range(0,len(knightPotentialMoves)):
+            if knightPotentialMoves[p] != None:
+                knightTileLetter, knightTileNumber =  knightPotentialMoves[p]
+                if knightTileLetter != 0 and knightTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(knightTileLetter, knightTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        for x in range(0,len(pieceCollisionList)):
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 3
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -3
+                            hel = Check(turn)
+                            if hel:
+                                knightPotentialMoves[p] = (0,0)
+                            if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 3
+                            elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -3
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 3
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -3
+                        hel = Check(turn)
+                        if hel:
+                            knightPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 3
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -3
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                
+        return knightPotentialMoves
+
+def RestrictBishopMovement(turn, whichBishop):
+    
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    
+    bishopPotentialMoves = WhereCanBishopMove(turn, whichBishop, True) 
+    currentbishopPos, currentIIndex, currentJIndex = GetPositionOfCurrentBishopForReset(turn, whichBishop)
+    if bishopPotentialMoves != None:
+        for p in range(0,len(bishopPotentialMoves)):
+            if bishopPotentialMoves[p] != None:
+                bishopTileLetter, bishopTileNumber =  bishopPotentialMoves[p]
+                if bishopTileLetter != 0 and bishopTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(bishopTileLetter, bishopTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        for x in range(0,len(pieceCollisionList)):
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 4
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -4
+                            hel = Check(turn)
+                            if hel:
+                                bishopPotentialMoves[p] = (0,0)
+                            if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 4
+                            elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -4
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 4
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -4
+                        hel = Check(turn)
+                        if hel:
+                            bishopPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 4
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -4
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                
+        return bishopPotentialMoves
+                   
+def RestrictQueenMovement(turn, whichQueen):
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+     
+    queenPotentialMoves = WhereCanQueenMove(turn, whichQueen) 
+    currentqueenPos, currentIIndex, currentJIndex = GetPositionOfCurrentQueenForReset(turn, whichQueen)
+    if queenPotentialMoves != None:
+        for p in range(0,len(queenPotentialMoves)):
+            if queenPotentialMoves[p] != None:
+                queenTileLetter, queenTileNumber =  queenPotentialMoves[p]
+                if queenTileLetter != 0 and queenTileNumber != 0:
+                    nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(queenTileLetter, queenTileNumber)
+                    rectLogicArray[currentIIndex][currentJIndex] = 0
+                    spot = rectLogicArray[nextIIndex][nextJIndex] 
+                    if spot != 0:
+                        piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                        tileLetter, tileNumber = piecePos
+                        for x in range(0,len(pieceCollisionList)):
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 4
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -4
+                            hel = Check(turn)
+                            if hel:
+                                queenPotentialMoves[p] = (0,0)
+                            if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 4
+                            elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -4
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                    else:
+                        if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 4
+                        elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -4
+                        hel = Check(turn)
+                        if hel:
+                            queenPotentialMoves[p] = (0,0)
+                        if turn == 'white':
+                                rectLogicArray[currentIIndex][currentJIndex] = 4
+                        elif turn == 'black':
+                                rectLogicArray[currentIIndex][currentJIndex] = -4
+                        rectLogicArray[nextIIndex][nextJIndex] = spot
+                
+        return queenPotentialMoves
+
+def CanAnyMovesBeMade(turn):
+    allMoves = []
+    
+    for x in range(1,10):
+            if x == 1:
+                allMoves.append(RestrictKingsMovement(turn))
+            if x < 3:
+                allMoves.append(RestrictBishopMovement(turn, x))
+                allMoves.append(RestrictCastleMovement(turn, x))
+                allMoves.append(RestrictKnightMovement(turn, x))
+            if x < 9:
+                allMoves.append(RestrictPawnMovement(turn, x, PossibleEnPassante(turn, x)))
+            allMoves.append(RestrictQueenMovement(turn, x))
+            
+    if allMoves != None:
+        for x in range(0, len(allMoves)):
+            if allMoves[x] != None:
+                for y in range(0, len(allMoves[x])):
+                    if allMoves[x][y] == None or allMoves[x][y] == (0,0):
+                        pass
+                    else:
+                        return True
+    
+    return False
+    
+                
+            
+
 def DetermineAllPotentialMovesForCheck(turn):
     # Determines all potential moves that a side can make, except the king
     if turn == 'white':
@@ -6172,7 +6653,13 @@ def DetermineAllPotentialMovesForCheck(turn):
                 allPotentialMoves.append(WhereCanCastleMove('black', x, True))
             if x < 9:
                 pawnMove = WhereCanPawnMove('black', x)
-                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                if pawnMove != None:
+                    if pawnMove[2] != None and pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                    elif pawnMove[2] != None:
+                        allPotentialMoves.append([pawnMove[2]])
+                    elif pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('black', x))
             
@@ -6186,7 +6673,13 @@ def DetermineAllPotentialMovesForCheck(turn):
                 allPotentialMoves.append(WhereCanCastleMove('white', x, True))
             if x < 9:
                 pawnMove = WhereCanPawnMove('white', x)
-                allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                if pawnMove != None:
+                    if pawnMove[2] != None and pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[2],pawnMove[3]])
+                    elif pawnMove[2] != None:
+                        allPotentialMoves.append([pawnMove[2]])
+                    elif pawnMove[3] != None:
+                        allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('white', x))
 
@@ -6224,13 +6717,501 @@ def Check(turn):
                             return True
         return False        
 
-def CheckMate(turn, check):
+def KingBeenChecked(turn, check):
+    if turn == 'white' and check:
+        whiteKing.checked = True
+    elif turn == 'black' and check:
+        blackKing.checked = True
+    
+def GetPositionOfCurrentPawnForReset(turn, currentPieceNumber):
     if turn == 'white':
-        if check:
-            pass
-          
+            if currentPieceNumber == 1:
+                return whitePawn1.pos, whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray
+            elif currentPieceNumber == 2:
+                return whitePawn2.pos, whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray
+            elif currentPieceNumber == 3:
+                return whitePawn3.pos, whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray
+            elif currentPieceNumber == 4:
+                return whitePawn4.pos, whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray
+            elif currentPieceNumber == 5:
+                return whitePawn5.pos, whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray
+            elif currentPieceNumber == 6:
+                return whitePawn6.pos, whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray
+            elif currentPieceNumber == 7:
+                return whitePawn7.pos, whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray
+            elif currentPieceNumber == 8:
+                return whitePawn8.pos, whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray
+    elif turn == 'black':
+            if currentPieceNumber == 1:
+                return blackPawn1.pos, blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray
+            elif currentPieceNumber == 2:
+                return blackPawn2.pos, blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray
+            elif currentPieceNumber == 3:
+                return blackPawn3.pos, blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray
+            elif currentPieceNumber == 4:
+                return blackPawn4.pos, blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray
+            elif currentPieceNumber == 5:
+                return blackPawn5.pos, blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray
+            elif currentPieceNumber == 6:
+                return blackPawn6.pos, blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray
+            elif currentPieceNumber == 7:
+                return blackPawn7.pos, blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray
+            elif currentPieceNumber == 8:
+                return blackPawn8.pos, blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray
+ 
+def GetPositionOfCurrentCastleForReset(turn, currentPieceNumber):
+    if turn == 'white':
+        if currentPieceNumber == 1:
+            return whiteCastle1.pos, whiteCastle1.indexIOnLogicArray, whiteCastle1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+                return whiteCastle2.pos, whiteCastle2.indexIOnLogicArray, whiteCastle2.indexJOnLogicArray
+    elif turn == 'black':
+        if currentPieceNumber == 1:
+            return blackCastle1.pos, blackCastle1.indexIOnLogicArray, blackCastle1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+                return blackCastle2.pos, blackCastle2.indexIOnLogicArray, blackCastle2.indexJOnLogicArray
+
+def GetPositionOfCurrentKnightForReset(turn, currentPieceNumber):
+    if turn == 'white':             
+        if currentPieceNumber == 1:
+            return whiteKnight1.pos, whiteKnight1.indexIOnLogicArray, whiteKnight1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return whiteKnight2.pos, whiteKnight2.indexIOnLogicArray, whiteKnight2.indexJOnLogicArray
+    elif turn == 'black':             
+        if currentPieceNumber == 1:
+            return blackKnight1.pos, blackKnight1.indexIOnLogicArray, blackKnight1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return blackKnight2.pos, blackKnight2.indexIOnLogicArray, blackKnight2.indexJOnLogicArray
+
+def GetPositionOfCurrentBishopForReset(turn, currentPieceNumber):
+    if turn == 'white':
+        if currentPieceNumber == 1:
+            return whiteBishop1.pos, whiteBishop1.indexIOnLogicArray, whiteBishop1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return whiteBishop2.pos, whiteBishop2.indexIOnLogicArray, whiteBishop2.indexJOnLogicArray
+    elif turn == 'black':
+        if currentPieceNumber == 1:
+            return blackBishop1.pos, blackBishop1.indexIOnLogicArray, blackBishop1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return blackBishop2.pos, blackBishop2.indexIOnLogicArray, blackBishop2.indexJOnLogicArray
+
+def GetPositionOfCurrentQueenForReset(turn, currentPieceNumber):
+    if turn == 'white':
+        if currentPieceNumber == 1:
+            return whiteQueen1.pos, whiteQueen1.indexIOnLogicArray, whiteQueen1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return whiteQueen2.pos, whiteQueen2.indexIOnLogicArray, whiteQueen2.indexJOnLogicArray
+        elif currentPieceNumber == 3:
+            return whiteQueen3.pos, whiteQueen3.indexIOnLogicArray, whiteQueen3.indexJOnLogicArray   
+        elif currentPieceNumber == 4:
+            return whiteQueen4.pos, whiteQueen4.indexIOnLogicArray, whiteQueen4.indexJOnLogicArray
+        elif currentPieceNumber == 5:
+            return whiteQueen5.pos, whiteQueen5.indexIOnLogicArray, whiteQueen5.indexJOnLogicArray 
+        elif currentPieceNumber == 6:
+            return whiteQueen6.pos, whiteQueen6.indexIOnLogicArray, whiteQueen6.indexJOnLogicArray 
+        elif currentPieceNumber == 7:
+            return whiteQueen7.pos, whiteQueen7.indexIOnLogicArray, whiteQueen7.indexJOnLogicArray 
+        elif currentPieceNumber == 8:
+            return whiteQueen8.pos, whiteQueen8.indexIOnLogicArray, whiteQueen8.indexJOnLogicArray 
+        elif currentPieceNumber == 9:
+            return whiteQueen9.pos, whiteQueen9.indexIOnLogicArray, whiteQueen9.indexJOnLogicArray
+    elif turn == 'black':
+        if currentPieceNumber == 1:
+            return blackQueen1.pos, blackQueen1.indexIOnLogicArray, blackQueen1.indexJOnLogicArray
+        elif currentPieceNumber == 2:
+            return blackQueen2.pos, blackQueen2.indexIOnLogicArray, blackQueen2.indexJOnLogicArray
+        elif currentPieceNumber == 3:
+            return blackQueen3.pos, blackQueen3.indexIOnLogicArray, blackQueen3.indexJOnLogicArray   
+        elif currentPieceNumber == 4:
+            return blackQueen4.pos, blackQueen4.indexIOnLogicArray, blackQueen4.indexJOnLogicArray 
+        elif currentPieceNumber == 5:
+            return blackQueen5.pos, blackQueen5.indexIOnLogicArray, blackQueen5.indexJOnLogicArray
+        elif currentPieceNumber == 6:
+            return blackQueen6.pos, blackQueen6.indexIOnLogicArray, blackQueen6.indexJOnLogicArray 
+        elif currentPieceNumber == 7:
+            return blackQueen7.pos, blackQueen7.indexIOnLogicArray, blackQueen7.indexJOnLogicArray 
+        elif currentPieceNumber == 8:
+            return blackQueen8.pos, blackQueen8.indexIOnLogicArray, blackQueen8.indexJOnLogicArray 
+        elif currentPieceNumber == 9:
+            return blackQueen9.pos, blackQueen9.indexIOnLogicArray, blackQueen9.indexJOnLogicArray 
+
+def GetPositionOfCurrentKingForReset(turn):
+    if turn == 'white':
+        return whiteKing.pos, whiteKing.indexIOnLogicArray, whiteKing.indexJOnLogicArray
+    elif turn == 'black':
+        return blackKing.pos, blackKing.indexIOnLogicArray, blackKing.indexJOnLogicArray
+
+# Castling methods 
+
+def CastlingPotentialMoves(turn, check):
+    pieceCollisionList = [whitePawn1,whitePawn2,whitePawn3,whitePawn4,whitePawn5,whitePawn6,whitePawn7,whitePawn8,
+                          whiteCastle1, whiteCastle2, whiteKnight1, whiteKnight2, whiteBishop1,whiteBishop2,
+                          whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, whiteQueen9,
+                          blackPawn1,blackPawn2,blackPawn3,blackPawn4,blackPawn5,blackPawn6,blackPawn7,blackPawn8,
+                          blackCastle1,blackCastle2,blackKnight1,blackKnight2,blackBishop1,blackBishop2,
+                          blackQueen1,blackQueen2,blackQueen3,blackQueen4,blackQueen5,blackQueen6,blackQueen7,blackQueen8, blackQueen9]
+    # This method checks the spaces between the king and castles are empty, the king has not moved, the king is not in check
+    # and checks that castling this turn will not put you directly into check, these are the rules to castling.
+    # It then returns the position the king can be moved to
+    
+    if turn == 'white':
+        if check == False and whiteKing.moved == False:
+            if rectLogicArray[7][6] == 0 and rectLogicArray[7][5] == 0:
+                currentkingPos, currentIIndex, currentJIndex = GetPositionOfCurrentKingForReset(turn)
+                kingPotentialMoves = [('f', 1), ('g', 1)]
+                for p in range(0, 2):
+                    if kingPotentialMoves[p] != None:
+                        kingTileLetter, kingTileNumber =  kingPotentialMoves[p]
+                        if kingTileLetter != 0 and kingTileNumber != 0:
+                            nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(kingTileLetter, kingTileNumber)
+                            rectLogicArray[currentIIndex][currentJIndex] = 0
+
+                        whiteKing.pos = (kingTileLetter, kingTileNumber)
+
+                        spot = rectLogicArray[nextIIndex][nextJIndex] 
+                        if spot != 0:
+                            piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                            tileLetter, tileNumber = piecePos
+                        
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+
+                            rectLogicArray[nextIIndex][nextJIndex] = 6
+
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = 6
+
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+
+                            whiteKing.pos = currentkingPos
+
+                        else:
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 6
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -6
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = 6
+
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+
+                            whiteKing.pos = currentkingPos
+
+                for x in range(0,2):
+                    if kingPotentialMoves[x] == (0,0) or kingPotentialMoves == None:
+                        return (0,0)
+                
+                return AdjustPositionAfterMove(7,6)
+                        
+            if rectLogicArray[7][1] == 0 and rectLogicArray[7][2] == 0 and rectLogicArray[7][3] == 0:
+                currentkingPos, currentIIndex, currentJIndex = GetPositionOfCurrentKingForReset(turn)
+                kingPotentialMoves = [('b', 1), ('c', 1), ('d', 1)]
+                for p in range(0, 3):
+                    if kingPotentialMoves[p] != None:
+                        kingTileLetter, kingTileNumber =  kingPotentialMoves[p]
+                        if kingTileLetter != 0 and kingTileNumber != 0:
+                            nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(kingTileLetter, kingTileNumber)
+                            rectLogicArray[currentIIndex][currentJIndex] = 0
+
+                        whiteKing.pos = (kingTileLetter, kingTileNumber)
+
+                        spot = rectLogicArray[nextIIndex][nextJIndex] 
+                        if spot != 0:
+                            piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                            tileLetter, tileNumber = piecePos
+                        
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            rectLogicArray[nextIIndex][nextJIndex] = 6
+                            
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = 6
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+
+                            whiteKing.pos = currentkingPos
+
+                        else:
+
+                            rectLogicArray[nextIIndex][nextJIndex] = 6
+
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = 6
+
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+
+                            whiteKing.pos = currentkingPos
+
+                for x in range(0,3):
+                    if kingPotentialMoves[x] == (0,0) or kingPotentialMoves == None:
+                        return (0,0)
+                
+                return AdjustPositionAfterMove(7,2)
+    elif turn == 'black':
+        if check == False and blackKing.moved == False:
+            if rectLogicArray[0][6] == 0 and rectLogicArray[0][5] == 0:
+                currentkingPos, currentIIndex, currentJIndex = GetPositionOfCurrentKingForReset(turn)
+                kingPotentialMoves = [('f', 8), ('g', 8)]
+                for p in range(0, 2):
+                    if kingPotentialMoves[p] != None:
+                        kingTileLetter, kingTileNumber =  kingPotentialMoves[p]
+                        if kingTileLetter != 0 and kingTileNumber != 0:
+                            nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(kingTileLetter, kingTileNumber)
+                            rectLogicArray[currentIIndex][currentJIndex] = 0
+                        blackKing.pos = (kingTileLetter, kingTileNumber)
+                        spot = rectLogicArray[nextIIndex][nextJIndex] 
+                        if spot != 0:
+                            piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                            tileLetter, tileNumber = piecePos
+                        
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+
+                            rectLogicArray[nextIIndex][nextJIndex] = -6
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = -6
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+                            blackKing.pos = currentkingPos
+                        else:
+                            if turn == 'white':
+                                rectLogicArray[nextIIndex][nextJIndex] = 6
+                            elif turn == 'black':
+                                rectLogicArray[nextIIndex][nextJIndex] = -6
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = -6
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+
+                            blackKing.pos = currentkingPos
+                for x in range(0,2):
+                    if kingPotentialMoves[x] == (0,0) or kingPotentialMoves == None:
+                        return (0,0)
+                    
+                return AdjustPositionAfterMove(0,6)
+            
+            if rectLogicArray[0][1] == 0 and rectLogicArray[0][2] == 0 and rectLogicArray[0][3] == 0:
+                currentkingPos, currentIIndex, currentJIndex = GetPositionOfCurrentKingForReset(turn)
+                kingPotentialMoves = [('b', 8), ('c', 8), ('d', 8)]
+                for p in range(0, 3):
+                    if kingPotentialMoves[p] != None:
+                        kingTileLetter, kingTileNumber =  kingPotentialMoves[p]
+                        if kingTileLetter != 0 and kingTileNumber != 0:
+                            nextIIndex, nextJIndex = FindingTheLogicArrayIndexOfATile(kingTileLetter, kingTileNumber)
+                            rectLogicArray[currentIIndex][currentJIndex] = 0
+
+                        blackKing.pos = (kingTileLetter, kingTileNumber)
+                        spot = rectLogicArray[nextIIndex][nextJIndex] 
+                        if spot != 0:
+                            piecePos = AdjustPositionAfterMove(nextIIndex, nextJIndex)
+                            tileLetter, tileNumber = piecePos
+                        
+                            pieceNumber = LocatingTheTileRects(tileLetter, tileNumber).collidelist(pieceCollisionList)
+                            piece = pieceCollisionList[pieceNumber]
+                            piece.onBoard = False
+                            rectLogicArray[nextIIndex][nextJIndex] = -6
+                            
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = -6
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            piece.onBoard = True
+
+                            blackKing.pos = currentkingPos
+                        else:
+                            rectLogicArray[nextIIndex][nextJIndex] = -6
+                            hel = Check(turn)
+                            if hel:
+                                kingPotentialMoves[p] = (0,0)
+
+                            rectLogicArray[currentIIndex][currentJIndex] = -6
+                            rectLogicArray[nextIIndex][nextJIndex] = spot
+                            blackKing.pos = currentkingPos
+                for x in range(0,3):
+                    if kingPotentialMoves[x] == (0,0) or kingPotentialMoves == None:
+                        return (0,0)
+                
+                return AdjustPositionAfterMove(0,2)
+
+def Castling(turn, movedBeforeThisTurn, check):
+    # This methods checks if the king has moved 2 space or 'castled' and then moves the castle to its new position
+    if turn == 'white':
+        if movedBeforeThisTurn == False and check == False:
+                if whiteKing.pos == ('g', 1):
+                    whiteCastle2.rect.x, whiteCastle2.rect.y = 650, 850
+                    CenterCastleInTile(turn, 2)
+                    rectLogicArray[whiteCastle2.indexIOnLogicArray][whiteCastle2.indexJOnLogicArray] = 0
+                    whiteCastle2.indexIOnLogicArray, whiteCastle2.indexJOnLogicArray = 7, 5
+                    rectLogicArray[whiteCastle2.indexIOnLogicArray][whiteCastle2.indexJOnLogicArray] = 2
+                    whiteCastle2.pos = ('f', 1)
+                elif whiteKing.pos == ('c', 1):
+                    whiteCastle1.rect.x, whiteCastle1.rect.y = 450, 850
+                    CenterCastleInTile(turn, 1)
+                    rectLogicArray[whiteCastle1.indexIOnLogicArray][whiteCastle1.indexJOnLogicArray] = 0
+                    whiteCastle1.indexIOnLogicArray, whiteCastle1.indexJOnLogicArray = 7, 3
+                    rectLogicArray[whiteCastle1.indexIOnLogicArray][whiteCastle1.indexJOnLogicArray] = 2
+                    whiteCastle1.pos = ('d', 1) 
+    elif turn == 'black':
+        if movedBeforeThisTurn == False and check == False:
+            if blackKing.pos == ('g', 8):
+                blackCastle2.rect.x, blackCastle2.rect.y = 650, 150
+                CenterCastleInTile(turn, 2)
+                rectLogicArray[blackCastle2.indexIOnLogicArray][blackCastle2.indexJOnLogicArray] = 0
+                blackCastle2.indexIOnLogicArray, blackCastle2.indexJOnLogicArray = 0, 5
+                rectLogicArray[blackCastle2.indexIOnLogicArray][blackCastle2.indexJOnLogicArray] = -2
+                blackCastle2.pos = ('f', 8)
+            elif blackKing.pos == ('c', 8):
+                blackCastle1.rect.x, blackCastle1.rect.y = 450, 150
+                CenterCastleInTile(turn, 1)
+                rectLogicArray[blackCastle1.indexIOnLogicArray][blackCastle1.indexJOnLogicArray] = 0
+                blackCastle1.indexIOnLogicArray, blackCastle1.indexJOnLogicArray = 0, 3
+                rectLogicArray[blackCastle1.indexIOnLogicArray][blackCastle1.indexJOnLogicArray] = -2
+                blackCastle1.pos = ('d', 8)
+                
+# EnPassante Methods
+      
+def PossibleEnPassante(turn, currentPawn): 
+    whitePawns = [whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8]
+    blackPawns = [blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, blackPawn7, blackPawn8]
+    # This method checks if a pawn is in the enPassante zone, for white pawns this is row number 5 and black row number 4
+    if turn == 'white':
+       if whitePawns[currentPawn-1].indexIOnLogicArray == 3:
+           return True
+    elif turn == 'black':
+        if blackPawns[currentPawn-1].indexIOnLogicArray == 4:
+            return True
+
+def FindWhichPawnIsInUse(turn, whichPawn):
+    whitePawns = [whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8]
+    blackPawns = [blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, blackPawn7, blackPawn8]
+    if turn == 'white':
+        if type(whichPawn) == int:
+            return whitePawns[whichPawn-1]
+    elif turn == 'black':
+        if type(whichPawn) ==  int:
+            return blackPawns[whichPawn-1]
+        
+def PossibleEnPassanteMoves(turn, currentPawn, possibleEnPassante):
+    whitePawns = [whitePawn1, whitePawn2, whitePawn3, whitePawn4, whitePawn5, whitePawn6, whitePawn7, whitePawn8]
+    blackPawns = [blackPawn1, blackPawn2, blackPawn3, blackPawn4, blackPawn5, blackPawn6, blackPawn7, blackPawn8]
+    possiblePawnMoves = [(0,0), (0,0)]
+    pawnUsed = FindWhichPawnIsInUse(turn, currentPawn)
+    listOfPawnsThatCanBeTaken = [0,0]
+
+    # This method returns the possible moves if enPassante is possible
+    if turn == 'white' and possibleEnPassante:
+        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == -1:
+            for x in range(0, len(blackPawns)):
+                if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and blackPawns[x].justMovedTwoSpace:
+                    tileLetter, tileNumber = blackPawns[x].pos
+                    possiblePawnMoves[0] = (tileLetter,tileNumber+1)
+                    listOfPawnsThatCanBeTaken[0] = blackPawns[x]
+                    
+        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == -1:
+            for x in range(0, len(blackPawns)):
+                if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and blackPawns[x].justMovedTwoSpace:
+                    tileLetter, tileNumber = blackPawns[x].pos
+                    possiblePawnMoves[1] = (tileLetter,tileNumber+1)
+                    listOfPawnsThatCanBeTaken[1] = blackPawns[x]
+        
+        return possiblePawnMoves, listOfPawnsThatCanBeTaken
+    
+    elif turn ==  'black' and possibleEnPassante:
+        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == 1:
+            for x in range(0, len(whitePawns)):
+                if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and whitePawns[x].justMovedTwoSpace:
+                    tileLetter, tileNumber = whitePawns[x].pos
+                    possiblePawnMoves[0] = (tileLetter,tileNumber-1)
+                    listOfPawnsThatCanBeTaken[0] = whitePawns[x]
+                    
+        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == 1:
+            for x in range(0, len(whitePawns)):
+                if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and whitePawns[x].justMovedTwoSpace:
+                    tileLetter, tileNumber = whitePawns[x].pos
+                    possiblePawnMoves[1] = (tileLetter,tileNumber-1)
+                    listOfPawnsThatCanBeTaken[1] = whitePawns[x]
+                    
+
+        return possiblePawnMoves, listOfPawnsThatCanBeTaken
+
+    return 0,0
+
+def EnPassante(turn, currentPawn, listOfCurrentPawnsThatCanBeTaken, ifMoveHasBeenMade):
+    blackCapturedIncrement = 0
+    whiteCapturedIncrement = 0
+    
+    # This method takes the opposing pawn once the attacking pawn has moved
+    if turn == 'white':
+        for x in range(0,2):
+            if listOfCurrentPawnsThatCanBeTaken[x] != 0 and listOfCurrentPawnsThatCanBeTaken[x] != None:
+                if currentPawn.indexIOnLogicArray == listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray-1 and currentPawn.indexJOnLogicArray == listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray:
+                    listOfCurrentPawnsThatCanBeTaken[x].rect.x, listOfCurrentPawnsThatCanBeTaken[x].rect.y = 3000+(60*blackCapturedIncrement),2500
+                    listOfCurrentPawnsThatCanBeTaken[x].pos = (0,0)
+                    rectLogicArray[listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray][listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray] = 0
+                    listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray, listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray = 10,10
+                    listOfCurrentPawnsThatCanBeTaken[x].onBoard = False
+                    capturedBlackPieces.append(listOfCurrentPawnsThatCanBeTaken[x])
+                    blackCapturedIncrement+=1
+    elif turn == 'black':
+        for x in range(0,2):
+            if listOfCurrentPawnsThatCanBeTaken[x] != 0 and listOfCurrentPawnsThatCanBeTaken[x] != None:
+                if currentPawn.indexIOnLogicArray == listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray+1 and currentPawn.indexJOnLogicArray == listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray:
+                    listOfCurrentPawnsThatCanBeTaken[x].rect.x, listOfCurrentPawnsThatCanBeTaken[x].rect.y = 3200+(60*whiteCapturedIncrement),2800
+                    listOfCurrentPawnsThatCanBeTaken[x].pos = (0,0)
+                    rectLogicArray[listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray][listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray] = 0
+                    listOfCurrentPawnsThatCanBeTaken[x].indexIOnLogicArray, listOfCurrentPawnsThatCanBeTaken[x].indexJOnLogicArray = 10,10
+                    listOfCurrentPawnsThatCanBeTaken[x].onBoard = False
+                    capturedWhitePieces.append(listOfCurrentPawnsThatCanBeTaken[x])
+                    whiteCapturedIncrement+=1
+    
+def IfATurnHasPassedNoEnPassante(turn):
+    # This method prevents enPassante from being used after a round has already passed
+    # The special move EnPassante must be made as soon as it is avaliable, it cannot be made after a turn has already passed
+    if turn == 'white':
+        blackPawn1.justMovedTwoSpace = False
+        blackPawn2.justMovedTwoSpace = False
+        blackPawn3.justMovedTwoSpace = False
+        blackPawn4.justMovedTwoSpace = False
+        blackPawn5.justMovedTwoSpace = False
+        blackPawn6.justMovedTwoSpace = False
+        blackPawn7.justMovedTwoSpace = False
+        blackPawn8.justMovedTwoSpace = False
+    elif turn == 'black':
+        whitePawn1.justMovedTwoSpace = False
+        whitePawn2.justMovedTwoSpace = False
+        whitePawn3.justMovedTwoSpace = False
+        whitePawn4.justMovedTwoSpace = False
+        whitePawn5.justMovedTwoSpace = False
+        whitePawn6.justMovedTwoSpace = False
+        whitePawn7.justMovedTwoSpace = False
+        whitePawn8.justMovedTwoSpace = False
+    
 gameFont = pygame.font.Font("freesansbold.ttf", 32)
 light_grey = (200,200,200)
+
 
 # Game setup method and variable
 CreateBlackPawns()
@@ -6269,6 +7250,11 @@ currentMovingQueen = 0
 check = False
 
 def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen):
+    gameOver = False
+    checkMate = False
+    staleMate = False
+    gameQuitTextColour = (0,0,0)
+    
     # Game loop
     while True:
         
@@ -6276,105 +7262,204 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            # Checking to see if the mouse is over a piece when it is clicked
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                if collidePawn:
-                    draggingPawn = True
-                    currentMovingPawn = WhichPawnIsCollidedWith(whichPlayersTurn, whereMouseIs)
-                elif collideCastle:
-                    draggingCastle = True
-                    currentMovingCastle = WhichCastleIsCollidedWith(whichPlayersTurn, whereMouseIs)
-                elif collideKnight:
-                    draggingKnight = True
-                    currentMovingKnight = WhichKnightIsCollidedWith(whichPlayersTurn, CollidingWithAKnight(whichPlayersTurn, whereMouseIs), whereMouseIs)
-                elif collideBishop:
-                    draggingBishop = True
-                    currentMovingBishop = WhichBishopIsCollidedWith(whichPlayersTurn, CollidingWithABishop(whichPlayersTurn, whereMouseIs), whereMouseIs)
-                elif collideQueen:
-                    draggingQueen = True
-                    currentMovingQueen = WhichQueenIsCollidedWith(whichPlayersTurn, whereMouseIs)
-                elif collideKing:
-                    draggingKing = True
-                    
-            # On mouse release it moves a piece if there was a potential move avaliable
-            # If a piece is moved the turn changes and then the check method is called to see if the new move caused a check
-            if event.type == pygame.MOUSEBUTTONUP and CheckIfMouseIsWithinBoardBorder(whereMouseIs):
-                if draggingPawn:
-                    
-                    MovePositionOfPawn(whichPlayersTurn, currentMovingPawn, WhereCanPawnMove(whichPlayersTurn, currentMovingPawn), whereMouseIs)
-                    # After a pawn move if they enter the promotion zone they are promoted to a queen
-                    if PawnCollidesWithPromotionZone(whichPlayersTurn, currentMovingPawn):
-                        PawnPromotion(whichPlayersTurn, currentMovingPawn)
-                    
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingPawn = False
-                    
-                elif draggingCastle:
-                    
-                    MovePositionOfCastle(whichPlayersTurn, currentMovingCastle, WhereCanCastleMove(whichPlayersTurn, currentMovingCastle, True), whereMouseIs)
-                    
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingCastle = False
-                    
-                elif draggingKnight:
-                    
-                    MovePositionOfKnight(whichPlayersTurn, currentMovingKnight, WhereCanKnightMove(whichPlayersTurn, currentMovingKnight), whereMouseIs)
-                    
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingKnight = False
-                
-                elif draggingBishop:
-                    
-                    MovePositionOfBishop(whichPlayersTurn, currentMovingBishop, WhereCanBishopMove(whichPlayersTurn, currentMovingBishop, draggingBishop), whereMouseIs)
-                    
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingBishop = False
-                
-                elif draggingQueen:
-                    
-                    MovePositionOfQueen(whichPlayersTurn, WhereCanQueenMove(whichPlayersTurn, currentMovingQueen), currentMovingQueen, whereMouseIs)
+            if gameOver:
+                if checkMate:
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if collideWithQuit:
+                            pygame.quit()
+                            sys.exit()
+                elif staleMate:
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if collideWithQuit:
+                            pygame.quit()
+                            sys.exit()
+            else:
+                    # Checking to see if the mouse is over a piece when it is clicked
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                        if collidePawn:
+                            draggingPawn = True
+                            currentMovingPawn = WhichPawnIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                        elif collideCastle:
+                            draggingCastle = True
+                            currentMovingCastle = WhichCastleIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                        elif collideKnight:
+                            draggingKnight = True
+                            currentMovingKnight = WhichKnightIsCollidedWith(whichPlayersTurn, CollidingWithAKnight(whichPlayersTurn, whereMouseIs), whereMouseIs)
+                        elif collideBishop:
+                            draggingBishop = True
+                            currentMovingBishop = WhichBishopIsCollidedWith(whichPlayersTurn, CollidingWithABishop(whichPlayersTurn, whereMouseIs), whereMouseIs)
+                        elif collideQueen:
+                            draggingQueen = True
+                            currentMovingQueen = WhichQueenIsCollidedWith(whichPlayersTurn, whereMouseIs)
+                        elif collideKing:
+                            draggingKing = True
+                            
+                    # On mouse release it moves a piece if there was a potential move avaliable
+                    # If a piece is moved the turn changes and then the check method is called to see if the new move caused a check
+                if event.type == pygame.MOUSEBUTTONUP and CheckIfMouseIsWithinBoardBorder(whereMouseIs):
+                        if draggingPawn:
+                            # Checks if enPassante is possible
+                            possibleEnPassante = PossibleEnPassante(whichPlayersTurn, currentMovingPawn)
+                            listOfPawnsToBeTaken = 0
+                            # If enPassante is possible put the moves that can be made into a list
+                            if possibleEnPassante:
+                                notNeededHere, listOfPawnsToBeTaken = PossibleEnPassanteMoves(whichPlayersTurn, currentMovingPawn, possibleEnPassante)
+                            # Moves the pawn
+                            MovePositionOfPawn(whichPlayersTurn, currentMovingPawn,RestrictPawnMovement(whichPlayersTurn, currentMovingPawn, possibleEnPassante), whereMouseIs)
+                            # After a pawn move if they enter the promotion zone they are promoted to a queen
+                            if PawnCollidesWithPromotionZone(whichPlayersTurn, currentMovingPawn):
+                                PawnPromotion(whichPlayersTurn, currentMovingPawn)
+                            
+                            if switchTurn:
+                                # Checks if enPassante occurs after the pawn has moved
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                # If it has occured the opposing piece is taken
+                                if listOfPawnsToBeTaken != None and listOfPawnsToBeTaken != 0:
+                                        EnPassante(whichPlayersTurn, FindWhichPawnIsInUse(whichPlayersTurn, currentMovingPawn),listOfPawnsToBeTaken, switchTurn)
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingPawn = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
+                            
+                        elif draggingCastle:
+                            
+                            MovePositionOfCastle(whichPlayersTurn, currentMovingCastle, RestrictCastleMovement(whichPlayersTurn, currentMovingCastle), whereMouseIs)
+                            
+                            if switchTurn:
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingCastle = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
+                            
+                        elif draggingKnight:
+                            
+                            MovePositionOfKnight(whichPlayersTurn, currentMovingKnight, RestrictKnightMovement(whichPlayersTurn, currentMovingKnight), whereMouseIs)
+                            
+                            if switchTurn:
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingKnight = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
+                        
+                        elif draggingBishop:
+                            
+                            MovePositionOfBishop(whichPlayersTurn, currentMovingBishop, RestrictBishopMovement(whichPlayersTurn, currentMovingBishop), whereMouseIs)
+                            
+                            if switchTurn:
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingBishop = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
+                        
+                        elif draggingQueen:
+                            
+                            MovePositionOfQueen(whichPlayersTurn, RestrictQueenMovement(whichPlayersTurn, currentMovingQueen), currentMovingQueen, whereMouseIs)
 
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingQueen = False
-                
-                elif draggingKing:
-                    
-                    MovePositionOfKing(whichPlayersTurn, RestrictKingsMovement(whichPlayersTurn, DetermineAllPotentialMovesForKingMoves(whichPlayersTurn)), whereMouseIs)
+                            if switchTurn:
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingQueen = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
+                        
+                        elif draggingKing:
+                            movedBeforeThisTurn = False
+                            if whichPlayersTurn == 'white':
+                                if whiteKing.moved:
+                                    movedBeforeThisTurn == True
+                            elif whichPlayersTurn == 'black':
+                                if blackKing.moved:
+                                    movedBeforeThisTurn == True 
+                            check = Check(whichPlayersTurn)     
+                                    
+                            MovePositionOfKing(whichPlayersTurn, RestrictKingsMovement(whichPlayersTurn), whereMouseIs)
+                            # Moves the castle after king movement
+                            Castling(whichPlayersTurn, movedBeforeThisTurn, check)
 
-                    if switchTurn:
-                        if whichPlayersTurn == 'white':
-                            whichPlayersTurn = 'black'
-                        elif whichPlayersTurn == 'black':
-                            whichPlayersTurn = 'white'
-                    check = Check(whichPlayersTurn)
-                    draggingKing = False
-                    
-            
+                            if switchTurn:
+                                IfATurnHasPassedNoEnPassante(whichPlayersTurn)
+                                
+                                if whichPlayersTurn == 'white':
+                                    whichPlayersTurn = 'black'
+                                elif whichPlayersTurn == 'black':
+                                    whichPlayersTurn = 'white'
+                                    
+                            check = Check(whichPlayersTurn)
+                            draggingKing = False
+                            
+                            KingBeenChecked(whichPlayersTurn, check)
+                            
+                            if check and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                checkMate = True
+                            elif check == False and CanAnyMovesBeMade(whichPlayersTurn) == False:
+                                gameOver = True
+                                staleMate = True
                     
         screen.fill((255,255,255))
         whereMouseIs = pygame.mouse.get_pos()
@@ -6386,13 +7471,21 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
         DrawTilePositions()
         
         # Shows which players turn it is and if check is occuring
-        if check:
-            whichPlayersTurnTextAndCheck = gameFont.render(f"{whichPlayersTurn} is in check", False, (0,0,0))
+        # Aswell as if checkmate or stalemate has occured at the end of the game
+        if checkMate:
+            whichPlayersTurnTextAndCheck = gameFont.render(f"Checkmate!", False, (0,0,0))
+            screen.blit(whichPlayersTurnTextAndCheck, (400,10))
+        elif staleMate:
+            whichPlayersTurnTextAndCheck = gameFont.render(f"Stalemate!", False, (0,0,0))
+            screen.blit(whichPlayersTurnTextAndCheck, (400,10))
+        elif check:
+            whichPlayersTurnTextAndCheck = gameFont.render(f"{whichPlayersTurn} is in check!", False, (0,0,0))
             screen.blit(whichPlayersTurnTextAndCheck, (350,10))
         else:
             whichPlayersTurnText = gameFont.render(f"{whichPlayersTurn}'s Turn", False, (0,0,0))
             screen.blit(whichPlayersTurnText, (400,10))
         
+            
         # Detect if mouse collides with a piece
         collidePawn = CollidingWithAPawn(whichPlayersTurn, whereMouseIs)
         collideCastle = CollidingWithACastle(whichPlayersTurn, whereMouseIs)
@@ -6474,9 +7567,72 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
         pygame.draw.rect(screen, (0,0,0), blackG1, 1)
         pygame.draw.rect(screen, (255,255,255), whiteH1, 1)
         
+        # Checkmate end of the game scenario
+        if gameOver and checkMate:
+            # The player who makes the last move is the winner,
+            # after a move has been made the turn switches.
+            # Therefore the winner needs to be set
+            
+            winner = 'white'
+            if whichPlayersTurn == 'white':
+                winner = 'black'
+            elif whichPlayersTurn == 'black':
+                winner = 'white'
+                
+            # End screen surface
+            gameFinishSurface = pygame.Surface((500,500))
+            # Makes the surface white
+            gameFinishSurface.fill((255,255,255))
+            screenCenter = (250,250)
+            # Creates rect from surface
+            gameFinishRect = gameFinishSurface.get_rect(center = (screenWidth/2, screenHeight/2))
+            # Puts the end screen surface and it's rect on the screen
+            screen.blit(gameFinishSurface, screenCenter)
+            pygame.draw.rect(screen, (0,0,0), gameFinishRect, 2)
+            # Renders who won on the end screen surface
+            gameEndText = gameFont.render(f"{winner} player wins!", False, (0,0,0))
+            screen.blit(gameEndText, (350,400))
+
+            # Creates quit button and puts it on the end screen surface
+            gameQuitText = gameFont.render(f"Quit", False, gameQuitTextColour, (255,255,255))
+            gameQuitRect = pygame.Rect(395,610,200,100)
+            screen.blit(gameQuitText, (460,650))
+            pygame.draw.rect(screen, (0,0,0), gameQuitRect, 2)
+    
+            # Detects if the mouse hovers over the quit button
+            collideWithQuit = gameQuitRect.collidepoint(whereMouseIs)
+            if collideWithQuit:
+                gameQuitTextColour = (255,0,0)
+            else:
+                gameQuitTextColour = (0,0,0)
+        
+        # Stalemate end of game scenario
+        if gameOver and staleMate:
+            gameFinishSurface = pygame.Surface((500,500))
+            gameFinishSurface.fill((255,255,255))
+    
+            screenCenter = (250,250)
+            gameFinishRect = gameFinishSurface.get_rect(center = (screenWidth/2, screenHeight/2))
+            screen.blit(gameFinishSurface, screenCenter)
+            pygame.draw.rect(screen, (0,0,0), gameFinishRect, 2)
+            gameEndText = gameFont.render(f"Stalemate, it is a draw!", False, (0,0,0))
+            screen.blit(gameEndText, (350,400))
+    
+            gameQuitText = gameFont.render(f"Quit", False, gameQuitTextColour, (255,255,255))
+            gameQuitRect = pygame.Rect(395,610,200,100)
+            screen.blit(gameQuitText, (460,650))
+            pygame.draw.rect(screen, (0,0,0), gameQuitRect, 2)
+    
+            collideWithQuit = gameQuitRect.collidepoint(whereMouseIs)
+            
+            if collideWithQuit:
+                gameQuitTextColour = (255,0,0)
+            else:
+                gameQuitTextColour = (0,0,0)
         
         pygame.display.flip()
         clock.tick(60)
+
 
 
 BG = pygame.image.load("/Users/michael/Python/Programming-and-design-project/background.jpg")
@@ -6534,8 +7690,10 @@ def secondScreen(): # second screen(colour choice) function
                     if whiteButtonRect.collidepoint(pygame.mouse.get_pos()):
                         # Transition back to first main menu screen ~ (work in progress) - wont take you to main menu in final design
                         GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
+
                     if blackButtonRect.collidepoint(pygame.mouse.get_pos()):
                         GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
+
                     if backButtonRect.collidepoint(pygame.mouse.get_pos()):
                         main_menu() # this one does stay like this... 
                         

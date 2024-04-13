@@ -15,11 +15,10 @@ class Pawn(ChessPiece):
         self.rect = self.surface.get_rect(center = (self.xInitialCoordinate, self.yInitialCoordinate))
         self.firstMove = True
         self.onBoard = onBoard
+        self.justMovedTwoSpace = False
         if self.x != 0 and self.y != 0:
             self.rect = self.GetNewRect()
-        
-
-        
+            
         
     def GetImage(self):
         if self.colour.lower() == 'black':

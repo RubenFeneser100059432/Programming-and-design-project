@@ -12,7 +12,6 @@ class Castle:
         self.rect = self.surface.get_rect(center = (self.xCoordinate, self.yCoordinate))
         self.onBoard = onBoard
         
-        
     def GetImage(self):
         if self.colour.lower() == 'black':
             return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/Black Chess Pieces/Black Castle.png')

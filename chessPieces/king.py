@@ -11,7 +11,8 @@ class King:
         self.xCoordinate, self.yCoordinate = self.GetInitialCoordinates()
         self.rect = self.surface.get_rect(center = (self.xCoordinate, self.yCoordinate))
         self.onBoard = onBoard
-    
+
+        self.moved = False
     def GetImage(self):
         if self.colour.lower() == 'black':
             return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/Black Chess Pieces/Black King.png')
@@ -29,3 +30,4 @@ class King:
         elif self.colour.lower() == "black":
             if self.pos == ("e", 8):
                 return (550, 150)
+           
