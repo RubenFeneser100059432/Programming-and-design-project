@@ -4934,17 +4934,6 @@ def WhereCanKingMove(turn):
                 if rectLogicArray[blackKing.indexIOnLogicArray - 1][blackKing.indexJOnLogicArray - 1] >= 0:
                     oneMoveInEachDirection[7] = AdjustPositionAfterMove(blackKing.indexIOnLogicArray - 1, blackKing.indexJOnLogicArray - 1)
             
-            """
-            for k in range(0,8):
-                kingTileLetter, kingTileNumber = oneMoveInEachDirection[k]
-                for x in range(0, len(potentialMoves)):
-                    if potentialMoves[x] != None:
-                        for y in range(0, len(potentialMoves[x])):
-                            if potentialMoves[x][y] != None:
-                                tileLetter, tileNumber =  potentialMoves[x][y]
-                                if tileLetter == kingTileLetter and tileNumber == kingTileNumber:
-                                    oneMoveInEachDirection[k] = (0,0)
-            """
 
             return oneMoveInEachDirection
 
@@ -6662,7 +6651,8 @@ def DetermineAllPotentialMovesForCheck(turn):
                         allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('black', x))
-            
+        allPotentialMoves.append(WhereCanKingMove('black'))
+        
         return allPotentialMoves
     elif turn == 'black':
         allPotentialMoves = []
@@ -6682,7 +6672,7 @@ def DetermineAllPotentialMovesForCheck(turn):
                         allPotentialMoves.append([pawnMove[3]])
                 
             allPotentialMoves.append(WhereCanQueenMove('white', x))
-
+        allPotentialMoves.append(WhereCanKingMove('white'))
         return allPotentialMoves
                 
 
@@ -7431,10 +7421,10 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
                             movedBeforeThisTurn = False
                             if whichPlayersTurn == 'white':
                                 if whiteKing.moved:
-                                    movedBeforeThisTurn == True
+                                    movedBeforeThisTurn = True
                             elif whichPlayersTurn == 'black':
                                 if blackKing.moved:
-                                    movedBeforeThisTurn == True 
+                                    movedBeforeThisTurn = True 
                             check = Check(whichPlayersTurn)     
                                     
                             MovePositionOfKing(whichPlayersTurn, RestrictKingsMovement(whichPlayersTurn), whereMouseIs)
