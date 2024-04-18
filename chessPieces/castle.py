@@ -14,9 +14,9 @@ class Castle:
         
     def GetImage(self):
         if self.colour.lower() == 'black':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/Black Chess Pieces/Black Castle.png')
+            return pygame.image.load('chessPieces/images/Black Chess Pieces/Black Castle.png')
         if self.colour.lower() == 'white':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/White Chess Pieces/White Castle.png')
+            return pygame.image.load('chessPieces/images/White Chess Pieces/White Castle.png')
         
     def ReduceImageToNeededSize(self):
         return pygame.transform.scale(self.GetImage(), self.size)

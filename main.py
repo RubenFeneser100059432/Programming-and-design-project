@@ -7625,7 +7625,7 @@ def GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnig
 
 
 
-BG = pygame.image.load("/Users/michael/Python/Programming-and-design-project/background.jpg")
+BG = pygame.image.load("background.jpg")
 
 def draw_text(text, font, color, surface, x, y): # defining a function draw_text for drawing words on buttons that takes the following peramiteres.
     text_obj = font.render(text, True, color) # renders text

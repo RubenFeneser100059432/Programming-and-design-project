@@ -15,9 +15,9 @@ class King:
         self.moved = False
     def GetImage(self):
         if self.colour.lower() == 'black':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/Black Chess Pieces/Black King.png')
+            return pygame.image.load('chessPieces/images/Black Chess Pieces/Black King.png')
         if self.colour.lower() == 'white':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/White Chess Pieces/White King.png')
+            return pygame.image.load('chessPieces/images/White Chess Pieces/White King.png')
         
     def ReduceImageToNeededSize(self):
         return pygame.transform.scale(self.GetImage(), self.size)

@@ -14,9 +14,9 @@ class Queen:
         
     def GetImage(self):
         if self.colour.lower() == 'black':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/Black Chess Pieces/Black Queen.png')
+            return pygame.image.load('chessPieces/images/Black Chess Pieces/Black Queen.png')
         if self.colour.lower() == 'white':
-            return pygame.image.load('/Users/michael/Python/PackageControlTesting/chessPieces/images/White Chess Pieces/White Queen.png')
+            return pygame.image.load('chessPieces/images/White Chess Pieces/White Queen.png')
     
     def ReduceImageToNeededSize(self):
         return pygame.transform.scale(self.GetImage(), self.size)
