@@ -1733,7 +1733,8 @@ def PawnPromotion(turn, whichPawn):
             # Get rid of the previous pawn's positions
             whitePawn1.rect.x, whitePawn1.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn1.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = 0,0
+            whitePawn1.onBoard = False
+            whitePawn1.indexIOnLogicArray, whitePawn1.indexJOnLogicArray = 10,10
             
         if whichPawn == 2:
             
@@ -1750,7 +1751,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn2.rect.x, whitePawn2.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn2.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = 0,0
+            whitePawn2.onBoard = False
+            whitePawn2.indexIOnLogicArray, whitePawn2.indexJOnLogicArray = 10,10
         
         if whichPawn == 3:
             
@@ -1767,7 +1769,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn3.rect.x, whitePawn3.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn3.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = 0,0
+            whitePawn3.onBoard = False
+            whitePawn3.indexIOnLogicArray, whitePawn3.indexJOnLogicArray = 10,10
         
         if whichPawn == 4:
             
@@ -1784,7 +1787,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn4.rect.x, whitePawn4.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn4.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = 0,0
+            whitePawn4.onBoard = False
+            whitePawn4.indexIOnLogicArray, whitePawn4.indexJOnLogicArray = 10,10
         
         if whichPawn == 5:
             
@@ -1801,7 +1805,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn5.rect.x, whitePawn5.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn5.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = 0,0
+            whitePawn5.onBoard = False
+            whitePawn5.indexIOnLogicArray, whitePawn5.indexJOnLogicArray = 10,10
         
         if whichPawn == 6:
             
@@ -1818,7 +1823,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn6.rect.x, whitePawn6.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn6.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = 0,0
+            whitePawn6.onBoard = False
+            whitePawn6.indexIOnLogicArray, whitePawn6.indexJOnLogicArray = 10,10
         
         if whichPawn == 7:
             
@@ -1835,7 +1841,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn7.rect.x, whitePawn7.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn7.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = 0,0
+            whitePawn8.onBoard = False
+            whitePawn7.indexIOnLogicArray, whitePawn7.indexJOnLogicArray = 10,10
         
         if whichPawn == 8:
             
@@ -1852,7 +1859,8 @@ def PawnPromotion(turn, whichPawn):
             
             whitePawn8.rect.x, whitePawn8.rect.y = 500, 1500+(60*whitePromotionCounter)
             whitePawn8.pos =  (500,10+(60*whitePromotionCounter))
-            whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = 0,0
+            whitePawn8.onBoard = False
+            whitePawn8.indexIOnLogicArray, whitePawn8.indexJOnLogicArray = 10,10
     
     elif turn == 'black':
         if whichPawn == 1:
@@ -1869,7 +1877,8 @@ def PawnPromotion(turn, whichPawn):
             # Get rid of all pawn positions
             blackPawn1.rect.x, blackPawn1.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn1.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = 0,0
+            blackPawn1.onBoard = False
+            blackPawn1.indexIOnLogicArray, blackPawn1.indexJOnLogicArray = 10,10
             
         if whichPawn == 2:
             
@@ -1886,7 +1895,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn2.rect.x, blackPawn2.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn2.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = 0,0
+            blackPawn2.onBoard = False
+            blackPawn2.indexIOnLogicArray, blackPawn2.indexJOnLogicArray = 10,10
         
         if whichPawn == 3:
             
@@ -1903,7 +1913,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn3.rect.x, blackPawn3.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn3.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = 0,0
+            blackPawn3.onBoard = False
+            blackPawn3.indexIOnLogicArray, blackPawn3.indexJOnLogicArray = 10,10
         
         if whichPawn == 4:
             
@@ -1920,7 +1931,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn4.rect.x, blackPawn4.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn4.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = 0,0
+            blackPawn4.onBoard = False
+            blackPawn4.indexIOnLogicArray, blackPawn4.indexJOnLogicArray = 10,10
         
         if whichPawn == 5:
             
@@ -1937,7 +1949,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn5.rect.x, blackPawn5.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn5.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = 0,0
+            blackPawn5.onBoard = False
+            blackPawn5.indexIOnLogicArray, blackPawn5.indexJOnLogicArray = 10,10
         
         if whichPawn == 6:
             
@@ -1954,7 +1967,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn6.rect.x, blackPawn6.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn6.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = 0,0
+            blackPawn6.onBoard = False
+            blackPawn6.indexIOnLogicArray, blackPawn6.indexJOnLogicArray = 10,10
         
         if whichPawn == 7:
             
@@ -1971,7 +1985,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn7.rect.x, blackPawn7.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn7.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = 0,0
+            blackPawn7.onBoard = False
+            blackPawn7.indexIOnLogicArray, blackPawn7.indexJOnLogicArray = 10,10
         
         if whichPawn == 8:
             
@@ -1988,7 +2003,8 @@ def PawnPromotion(turn, whichPawn):
             
             blackPawn8.rect.x, blackPawn8.rect.y = 500, 1500+(60*blackPromotionCounter)
             blackPawn8.pos =  (500,10+(60*blackPromotionCounter))
-            blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = 0,0
+            blackPawn8.onBoard = False
+            blackPawn8.indexIOnLogicArray, blackPawn8.indexJOnLogicArray = 10,10
         
 def CreatePromotedQueens():
     global whiteQueen1, whiteQueen2, whiteQueen3, whiteQueen4, whiteQueen5, whiteQueen6, whiteQueen7, whiteQueen8, blackQueen1, blackQueen2, blackQueen3, blackQueen4, blackQueen5, blackQueen6, blackQueen7, blackQueen8
