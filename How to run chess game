@@ -3,10 +3,11 @@ Project repository for our year 1 semester 2 assessment
 
 How to run our chess game:
 if you have not already got these installed
-- Download python3 and ensure it's up to date
+- Download python3, the earlier versions run faster.
 - Download pygame ensure it's up to date
 - Download vscode or another ide that supports python and pygame
 - Install a python debugger
 - Clone repository to a local folder
+- If cloned into onedrive the pathing does not work correctly
 
   Finally run the main.py with all components in the same folder
