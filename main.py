@@ -7129,36 +7129,39 @@ def PossibleEnPassanteMoves(turn, currentPawn, possibleEnPassante):
 
     # This method returns the possible moves if enPassante is possible
     if turn == 'white' and possibleEnPassante:
-        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == -1:
-            for x in range(0, len(blackPawns)):
-                if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and blackPawns[x].justMovedTwoSpace:
-                    tileLetter, tileNumber = blackPawns[x].pos
-                    possiblePawnMoves[0] = (tileLetter,tileNumber+1)
-                    listOfPawnsThatCanBeTaken[0] = blackPawns[x]
-                    
-        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == -1:
-            for x in range(0, len(blackPawns)):
-                if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and blackPawns[x].justMovedTwoSpace:
-                    tileLetter, tileNumber = blackPawns[x].pos
-                    possiblePawnMoves[1] = (tileLetter,tileNumber+1)
-                    listOfPawnsThatCanBeTaken[1] = blackPawns[x]
+        if pawnUsed.indexJOnLogicArray < 7:
+            if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == -1:
+                for x in range(0, len(blackPawns)):
+                    if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and blackPawns[x].justMovedTwoSpace:
+                        tileLetter, tileNumber = blackPawns[x].pos
+                        possiblePawnMoves[0] = (tileLetter,tileNumber+1)
+                        listOfPawnsThatCanBeTaken[0] = blackPawns[x]
+        if pawnUsed.indexJOnLogicArray > 0:
+            if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == -1:
+                for x in range(0, len(blackPawns)):
+                    if blackPawns[x].indexIOnLogicArray == 3 and blackPawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and blackPawns[x].justMovedTwoSpace:
+                        tileLetter, tileNumber = blackPawns[x].pos
+                        possiblePawnMoves[1] = (tileLetter,tileNumber+1)
+                        listOfPawnsThatCanBeTaken[1] = blackPawns[x]
         
         return possiblePawnMoves, listOfPawnsThatCanBeTaken
     
     elif turn ==  'black' and possibleEnPassante:
-        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == 1:
-            for x in range(0, len(whitePawns)):
-                if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and whitePawns[x].justMovedTwoSpace:
-                    tileLetter, tileNumber = whitePawns[x].pos
-                    possiblePawnMoves[0] = (tileLetter,tileNumber-1)
-                    listOfPawnsThatCanBeTaken[0] = whitePawns[x]
-                    
-        if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == 1:
-            for x in range(0, len(whitePawns)):
-                if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and whitePawns[x].justMovedTwoSpace:
-                    tileLetter, tileNumber = whitePawns[x].pos
-                    possiblePawnMoves[1] = (tileLetter,tileNumber-1)
-                    listOfPawnsThatCanBeTaken[1] = whitePawns[x]
+        if pawnUsed.indexJOnLogicArray < 7:
+            if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray+1] == 1:
+                for x in range(0, len(whitePawns)):
+                    if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray+1 and whitePawns[x].justMovedTwoSpace:
+                        tileLetter, tileNumber = whitePawns[x].pos
+                        possiblePawnMoves[0] = (tileLetter,tileNumber-1)
+                        listOfPawnsThatCanBeTaken[0] = whitePawns[x]
+        if pawnUsed.indexJOnLogicArray > 0:
+        
+            if rectLogicArray[pawnUsed.indexIOnLogicArray][pawnUsed.indexJOnLogicArray-1] == 1:
+                for x in range(0, len(whitePawns)):
+                    if whitePawns[x].indexIOnLogicArray == 4 and whitePawns[x].indexJOnLogicArray == pawnUsed.indexJOnLogicArray-1 and whitePawns[x].justMovedTwoSpace:
+                        tileLetter, tileNumber = whitePawns[x].pos
+                        possiblePawnMoves[1] = (tileLetter,tileNumber-1)
+                        listOfPawnsThatCanBeTaken[1] = whitePawns[x]
                     
 
         return possiblePawnMoves, listOfPawnsThatCanBeTaken
