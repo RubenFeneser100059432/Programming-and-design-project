@@ -7665,7 +7665,8 @@ def main_menu():
                 if playButtonRect.collidepoint(pygame.mouse.get_pos()):
                     # if the event taken was a mouse click by the user, and the collidepoint is on the start button;
                     # Transition to next screen
-                    secondScreen()
+                    GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
+                    
                 if quitButtonRect.collidepoint(pygame.mouse.get_pos()):
                     pygame.quit()
                     sys.exit()
@@ -7683,39 +7684,6 @@ def main_menu():
         pygame.display.flip() # turns to next screen once button clicked
         clock.tick(60)
 
-def secondScreen(): # second screen(colour choice) function
-    while True: # same loop as first screen
-        whiteButtonRect = pygame.Rect(screenWidth // 2 - -100, screenHeight // 2 - 50, 200, 100) # white button variable
-        blackButtonRect = pygame.Rect(screenWidth // 2 - 350, screenHeight // 2 - 50, 200, 100) # black button variable
-        backButtonRect = pygame.Rect(screenWidth // 2 - 100, screenHeight // 2- -100, 200, 100) # back button variable
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                    if whiteButtonRect.collidepoint(pygame.mouse.get_pos()):
-                        # Transition back to first main menu screen ~ (work in progress) - wont take you to main menu in final design
-                        GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
 
-                    if blackButtonRect.collidepoint(pygame.mouse.get_pos()):
-                        GameLoop(check, whichPlayersTurn, draggingPawn, draggingCastle, draggingKnight, draggingBishop, draggingQueen, draggingKing, currentMovingPawn, currentMovingCastle, currentMovingKnight, currentMovingBishop, currentMovingQueen)
-
-                    if backButtonRect.collidepoint(pygame.mouse.get_pos()):
-                        main_menu() # this one does stay like this... 
-                        
-        screen.blit(BG, (0, 0))
-        draw_text("Player One, Please Choose Your Colour", pygame.font.Font(None, 60), (0, 0, 0), screen, screenWidth // 2, 100)
-        colourOfButtonWhite = (255,255,255) # adding colour of white button
-        colourOfButtonBlack = (0,0,0) # adding colour of black button
-        colourOfButtonBack = (20,20,20) # colour of back button
-        pygame.draw.rect(screen, colourOfButtonWhite, whiteButtonRect) # drawing white button on screen
-        pygame.draw.rect(screen, colourOfButtonBlack, blackButtonRect) # drawing black button on screen
-        pygame.draw.rect(screen, colourOfButtonBack, backButtonRect) # drawing back button on screen
-        draw_text("White", pygame.font.Font(None, 60), (0,0,0), screen, screenWidth // 1.4 - 20, screenHeight // 2,)
-        draw_text("Black", pygame.font.Font(None, 60), (255,255,255), screen, screenWidth // 4, screenHeight // 2,)
-        draw_text("Back", pygame.font.Font(None, 60), (255,0,0), screen, screenWidth // 2, screenHeight // 1.4 - 60) #same as quit button positioning
-        
-        pygame.display.flip() # in this instance flips back to main menu screen (for now...)
-        clock.tick(60)
 
 main_menu() # runs program
