@@ -4,8 +4,6 @@ from boardComponents.tiles import Tiles
 class Board:
     def __init__(self):
         self.numberOfTiles =  64
-        self.blackTiles =  self.numberOfTiles / 2
-        self.whiteTiles = self.numberOfTiles / 2
         self.boardLogicArray = [
             [('a', 8), ('b', 8), ('c', 8), ('d', 8), ('e', 8), ('f', 8), ('g', 8), ('h', 8)],
             [('a', 7), ('b', 7), ('c', 7), ('d', 7), ('e', 7), ('f', 7), ('g', 7), ('h', 7)],
@@ -21,11 +19,11 @@ class Board:
         self.whiteTiles = self.Create32WhiteTiles()
         
         self.widthInNumberOfTiles, self.heightInNumberOfTiles =  8, 8
+        self.rect = pygame.Rect(100,100,800,800)
         
-    # Method to create the half the tiles necessary for the board
     def Create32BlackTiles(self):
         dictionaryOfBlackTiles = {
-            }
+        }
         for x in range(8):
             for y in range(8):
                 if not(y % 2 == 0) :
@@ -33,13 +31,12 @@ class Board:
               
         return dictionaryOfBlackTiles
     
-    # The other half of the tiles
     def Create32WhiteTiles(self):
         dictionaryOfWhiteTiles = {
-            }
+        }
         for x in range(8):
             for y in range(8):
                 if y % 2 == 0 or y == 0:
-                    dictionaryOfWhiteTiles[self.boardLogicArray[x][y]] = Tiles((255,0,0), self.boardLogicArray[x][y]).surface
+                    dictionaryOfWhiteTiles[self.boardLogicArray[x][y]] = Tiles((255,255,255), self.boardLogicArray[x][y]).surface
               
         return dictionaryOfWhiteTiles
